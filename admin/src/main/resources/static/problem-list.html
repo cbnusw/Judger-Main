@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>asd</title>
+</head>
+<body>
+    <table border="1">
+        <th>이름</th>
+        <th>시간 제한</th>
+        <th>메모리 제한</th>
+        <tbody id="problems"></tbody>
+    </table>
+    <div id="problem-form" >
+        Select image to upload:
+        <input type="file" name="file" id="file">
+        <input type="text" name="name" id="name">
+        <input type="text" name="timeLimit" id="timeLimit">
+        <input type="text" name="memoryLimit" id="memoryLimit">
+        <input type="submit" onclick="createProblem()">
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const createProblem = () => {
+            const problemFormData = new FormData();
+            const file = document.getElementById('file');
+            problemFormData.append('name', document.getElementById('name').value);
+            problemFormData.append('timeLimit', document.getElementById('timeLimit').value);
+            problemFormData.append('memoryLimit', document.getElementById('memoryLimit').value);
+            problemFormData.append('file',file.files[0]);
+
+            axios.post('/problems', problemFormData, {
+                headers: {'Content-Type': 'multipart/form-data'}
+            }).then (function (response) {
+                window.location.href = response.headers.location;
+            })
+        };
+
+        const fetchProblems = () => {
+            axios.get('/problems')
+                .then(function(response){
+                    const problems = response.data;
+                    for (const i in response.data) {
+                        const pr = document.getElementById("problems");
+                        const row = pr.insertRow(pr.rows.length)
+                        row.insertCell(0).innerHTML = "<a href=\"/problems/" + problems[i].id + "/files\">" + problems[i].name + "</a>"
+                        row.insertCell(1).innerHTML = problems[i].timeLimit;
+                        row.insertCell(1).innerHTML = problems[i].memoryLimit;
+                    }
+                })};;
+
+        fetchProblems();
+
+    </script>
+</body>
+</html>
