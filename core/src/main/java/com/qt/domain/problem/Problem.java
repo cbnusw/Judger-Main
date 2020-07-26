@@ -43,7 +43,7 @@ public class Problem {
         this.timeLimit = timeLimit;
         this.memoryLimit = memoryLimit;
     }
-
+    //get함수 만들기!
     public Long updateTo(String identifier, ProblemRequestInfo problemRequestInfo) {
         this.name = problemRequestInfo.getName();
         this.identifier = identifier;

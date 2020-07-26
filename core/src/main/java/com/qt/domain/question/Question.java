@@ -23,7 +23,7 @@ public class Question {
     @ManyToOne
     private Contest contest;
 
-    //여기 부분 정리?? 
+    //여기 부분 정리??
 <<<<<<< HEAD
 =======
     @CreatedBy
