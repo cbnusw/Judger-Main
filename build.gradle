@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.1.RELEASE'
+        springBootVersion = '2.1.6.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -49,4 +49,11 @@ project(':admin') {
     dependencies {
         compile project(':core')
     }
+}
+
+project(':service'){
+    dependencies{
+        compile project(":core")
+    }
+
 }
