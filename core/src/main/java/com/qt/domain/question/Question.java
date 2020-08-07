@@ -24,14 +24,14 @@ public class Question {
     private Contest contest;
 
     //여기 부분 정리??
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
     @CreatedBy
     @ManyToOne
     private User user;
 
     @NotNull
->>>>>>> 9b0c369c9a946ec3fab067eb56d17b344a01d415
+//>>>>>>> 9b0c369c9a946ec3fab067eb56d17b344a01d415
     private Integer problemNumber;
 
     @Lob
