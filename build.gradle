@@ -18,7 +18,7 @@ subprojects {
 
     group = 'com.hg'
     version = '1.0'
-    sourceCompatibility = 1.8
+    sourceCompatibility = 1.8 //1.8 이 아닌 14.2
 
     repositories {
         mavenCentral()
@@ -57,8 +57,7 @@ project(':admin') {
 
 project(':service'){
     dependencies{
-        compile project(":core")
         compile project(":admin")
-    }
 
+    }
 }

@@ -23,20 +23,21 @@ public class SwaggerConfig {
 
     private ApiInfo metadata(){
         return new ApiInfoBuilder()
-                        .title("Spring Boot Admin Server API")
-                        .description("Description of Admin Server API")
-                        .version("1.0")
-                        .build();
+                       .title("Spring Boot Admin Server API")
+                       .description("Description of Admin Server API")
+                       .version("1.0")
+                       .build();
     }
 
     @Bean
     public Docket api()
     {
         return new Docket(DocumentationType.SWAGGER_2)
-                .select()
-                .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
-                .build()
-                .apiInfo(metadata());
+                       .select()
+                       .apis(RequestHandlerSelectors.any())
+                       .paths(PathSelectors.any())
+                       .build()
+                       .apiInfo(metadata());
     }
 }
+

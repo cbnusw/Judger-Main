@@ -1,10 +1,10 @@
 package com.qt.question;
 
 import com.qt.AcceptanceTestUtils;
+import com.qt.contest.ContestRepository;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.dto.ContestInfo;
-import com.qt.ext.ContestRepository;
-import com.qt.ext.StudentRepository;
+import com.qt.user.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -28,8 +28,9 @@ class QuestionAcceptanceTest {
     @Autowired
     private ContestRepository contestRepository;
 
+    //StudentRepository=> UserRepository로 변경
     @Autowired
-    private StudentRepository studentRepository;
+    private UserRepository userRepository;
 
     @Autowired
     private QuestionRepository questionRepository;
