@@ -38,6 +38,10 @@ subprojects {
         }
         testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.1")
         testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.1")
+
+        //REST-API 문서화
+        compile group:'io.springfox', name:'springfox-swagger2',version:'2.4.0'
+        compile group:'io.springfox',name:'springfox-swagger-ui',version:'2.4.0'
     }
 
     test {
@@ -54,6 +58,7 @@ project(':admin') {
 project(':service'){
     dependencies{
         compile project(":core")
+        compile project(":admin")
     }
 
 }
