@@ -1,29 +1,64 @@
 package com.qt.submit;
 
+import lombok.Builder;
+
 import javax.validation.constraints.NotNull;
 
 public class Submit {
 
     @NotNull
+    private String source;
+
+    @NotNull
     private String language;
 
     @NotNull
-    private String code;
+    private String input;
 
+    @NotNull
+    private String answer;
 
     public String getLanguage(){
         return language;
     }
 
-    public String getCode()
+    public String getSource()
     {
-        return code;
+        return source;
     }
 
-    public Submit(@NotNull String language, @NotNull String code)
+    public String getInput()
     {
+        return input;
+    }
+
+    public String getAnswer(){
+        return answer;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public void setInput(String input) {
+        this.input = input;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    @Builder
+    public Submit(@NotNull String language, @NotNull String source,@NotNull String input, @NotNull String answer)
+    {
+        this.source=source;
         this.language=language;
-        this.code=code;
+        this.input=input;
+        this.answer=answer;
     }
 
 
