@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aac07aac-88bc-4c49-91de-2995ae4428a7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/TestRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/ContestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/ContestRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/ContestService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/NotFoundContestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/apply/ContestApplicationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/apply/ContestApplicationInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/apply/ContestApplicationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/apply/ContestApplicationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/apply/NotFoundContestApplicationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/regist/ContestProblemRegistrationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/regist/ContestProblemRegistrationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/contest/regist/ContestProblemRegistrationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/problem/NotFoundProblemException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/problem/ProblemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/problem/ProblemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/problem/ProblemService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/problem/TestcaseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/user/NotFoundUserException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/user/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/user/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/java/com/qt/user/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/main/resources/static/problem-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/test/java/com/qt/AcceptanceTestUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/test/java/com/qt/contest/ContestAcceptanceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/test/java/com/qt/contest/ContestApplicationAcceptanceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/test/java/com/qt/contest/ContestProblemRegistrationAcceptanceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/test/java/com/qt/problem/ProblemAcceptanceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/src/test/java/com/qt/user/UserAcceptanceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/contest/Contest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/contest/ContestApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/contest/ContestProblemRegistration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/contest/dto/ContestInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/problem/Problem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/problem/dto/FileInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/problem/dto/ProblemRequestInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/problem/dto/ProblemResponseInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/question/Question.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/question/dto/QuestionInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/testcase/Testcase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/user/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/java/com/qt/domain/user/dto/UserInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/src/main/java/com/qt/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/src/main/java/com/qt/question/NotFoundQuestionException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/src/main/java/com/qt/question/QuestionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/src/main/java/com/qt/question/QuestionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/src/main/java/com/qt/question/QuestionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/src/test/java/com/qt/AcceptanceTestUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/src/test/java/com/qt/MultiValueMapConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service/src/test/java/com/qt/question/QuestionAcceptanceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../settings.gradle" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1g8RTGpeaGjIAtqvOH6vKsxz4Sl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Judger-Main-Server-master" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aac07aac-88bc-4c49-91de-2995ae4428a7" name="Default Changelist" comment="" />
+      <created>1597494239418</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597494239418</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1180" y="190" key="FileChooserDialogImpl" timestamp="1597494261033">
+      <screen x="-1920" y="-85" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="190" key="FileChooserDialogImpl/0.0.1536.824/-1920.-85.1920.1040@-1920.-85.1920.1040" timestamp="1597494261033" />
+  </component>
+</project>

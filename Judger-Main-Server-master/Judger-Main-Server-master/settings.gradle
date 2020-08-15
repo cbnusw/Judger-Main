@@ -1,0 +1,5 @@
+rootProject.name = 'judger-main-server'
+include 'core'
+include 'admin'
+include 'service'
+
