@@ -23,8 +23,8 @@ public class SwaggerConfig {
 
     private ApiInfo metadata(){
         return new ApiInfoBuilder()
-                       .title("Spring Boot Admin Server API")
-                       .description("Description of Admin Server API")
+                       .title("Spring Boot Service Server API")
+                       .description("Description of Service Server API")
                        .version("1.0")
                        .build();
     }
