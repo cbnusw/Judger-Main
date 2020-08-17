@@ -52,8 +52,13 @@ public class Submit {
         this.answer = answer;
     }
 
+    public Submit()
+    {
+
+    }
+
     @Builder
-    public Submit(@NotNull String language, @NotNull String source,@NotNull String input, @NotNull String answer)
+    public Submit(@NotNull String source, @NotNull String language,@NotNull String input, @NotNull String answer)
     {
         this.source=source;
         this.language=language;
