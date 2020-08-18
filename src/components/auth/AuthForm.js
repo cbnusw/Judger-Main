@@ -65,26 +65,29 @@ const textMap = {
 };
 
 
-const AuthForm = ({type}) => {
+const AuthForm = ({type, form, onChange, onSubmit}) => {
     const text = textMap[type];
 
     return(
 
-        <AuthFormBlock>
-          
-            <form>
+        <AuthFormBlock>          
+            <form onSubmit={onSubmit}>
                 <div>
-                <StyledInput 
-                    autoComplete="username" 
-                    name="username" 
-                    placeholder="사용자 ID" 
+                <StyledInput
+                    autoComplete="username"
+                    name="username"
+                    placeholder="사용자 ID"
+                    onChange={onChange}
+                    value={form.username}
                 />
                 <p id='guide_msg'>※학생의 경우 학번으로, 교직원의 경우 학교 E-mail 아이디로 가입하시기 바랍니다. </p>
                 <StyledInput 
                     autoComplete="new-password" 
                     name="password" 
                     placeholder="비밀번호" 
-                    type="password" 
+                    type="password"
+                    onChange={onChange}
+                    value={form.password} 
                 />                    
                 </div>
                 <p></p>
@@ -95,34 +98,46 @@ const AuthForm = ({type}) => {
                         name="passwordConfirm" 
                         placeholder="비밀번호 확인" 
                         type="password" 
+                        onChange={onChange}
+                        value={form.passwordConfirm} 
                     />
                     <StyledInput 
                         autoComplete="name" 
                         name="name" 
                         placeholder="이름" 
+                        onChange={onChange}
+                        value={form.name} 
                          
                     />
                     <StyledInput 
                         autoComplete="college" 
                         name="college" 
-                        placeholder="소속대학" 
+                        placeholder="소속대학"
+                        onChange={onChange}
+                        value={form.college}  
                     />
                     <StyledInput 
                         autoComplete="major" 
                         name="major" 
-                        placeholder="소속학과" 
+                        placeholder="소속학과"
+                        onChange={onChange}
+                        value={form.major}  
                     />
                     <StyledInput 
                         autoComplete="email" 
                         name="email" 
                         placeholder="E-mail"
                         type="email" 
+                        onChange={onChange}
+                        value={form.email} 
                     />
                     <StyledInput 
                         autoComplete="phone" 
                         name="phone" 
                         placeholder="연락처"
                         type="tel" 
+                        onChange={onChange}
+                        value={form.phone} 
                     />
                     
                     </div>                   
