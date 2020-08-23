@@ -6,6 +6,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.client.AutoConfigureWebClient;
+import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpHeaders;
@@ -14,10 +16,13 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.web.reactive.function.BodyInserters;
 
+import java.time.Duration;
+
 import static org.hamcrest.Matchers.greaterThan;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@AutoConfigureWebTestClient(timeout = "360000") //Timeout을 15초로 설정
 public class ProblemAcceptanceTest {
 
     @Autowired
@@ -25,8 +30,8 @@ public class ProblemAcceptanceTest {
 
     private String problemId;
 
-    @Test
-    //@BeforeEach
+    //@Test
+    @BeforeEach
     @DisplayName("pdf 파일, 문제 저장 테스트")
     void createProblem() {
         System.out.println("문제 저장테스트-------------------");
@@ -141,8 +146,8 @@ public class ProblemAcceptanceTest {
         ByteArrayResource outputFile1 = createFile("1.out");
         ByteArrayResource outputFile2 = createFile("2.out");
 
-        webTestClient.post()
-                .uri("/problems/" + problemId + "/testcase")
+        webTestClient.mutate().responseTimeout(Duration.ofMillis(30000)).build().post()
+                .uri("/problems/" + "1" + "/testcase")
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromMultipartData("in", inputFile1)
                         .with("out", outputFile1)
