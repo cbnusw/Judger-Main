@@ -1,5 +1,4 @@
 // saga: action listener
-
 import { call, put } from 'redux-saga/effects';
 import { startLoading, finishLoading } from '../modules/loading';
 
@@ -16,10 +15,10 @@ export default function createRequestSaga(type, request) {
     return function*(action){
         yield put(startLoading(type)); // 로딩시작
         try{
-            const respose = yield call(request, action.payload);
+            const response = yield call(request, action.payload);
             yield put({
                 type:SUCCESS,
-                payload: Response.data,
+                payload: response.data,
             });
         } catch(e){
             yield put({

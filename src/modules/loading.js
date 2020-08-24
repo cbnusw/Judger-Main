@@ -7,7 +7,7 @@ const FINISH_LOADING = 'loading/FINISH_LOADING';
  * 요청을 위한 액션 타입을 payload로 설정
  */
 export const startLoading = createAction(
-    STRAT_LOADING,
+    START_LOADING,
     requestType => requestType,
 );
 
@@ -16,7 +16,7 @@ export const finishLoading = createAction(
     requestType => requestType,
 );
 
-const initailState = {};
+const initialState = {};
 
 const loading = handleActions(
     {
