@@ -42,8 +42,8 @@ public class ContestAcceptanceTest {
 
 
     @DisplayName("콘테스트 등록 테스트")
-    @Test
-    //@BeforeEach
+    //@Test
+    @BeforeEach
     void createContest() {
         System.out.println("콘테스트 등록 테스트");
         WebTestClient.ResponseSpec responseSpec = webTestClient.post()

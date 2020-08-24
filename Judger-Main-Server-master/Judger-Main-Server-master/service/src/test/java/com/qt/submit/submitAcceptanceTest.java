@@ -17,7 +17,7 @@ public class submitAcceptanceTest {
     void submitCode(){
         System.out.println("코드제출 테스트");
         WebTestClient.ResponseSpec responseSpec=webTestClient.post()
-                .uri("/problems/1/submit")
+                .uri("/submit/problems/1/users/2")
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromFormData("source","#include <stdio.h>\n" +
                         "#include <math.h>\n" +

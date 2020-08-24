@@ -20,7 +20,6 @@ public class TestcaseService {
     private static final String TEST_CASE_PATH = "/tc";
     private static final String TEST_CASE_INPUT_PATH = "/in";
     private static final String TEST_CASE_OUTPUT_PATH = "/out";
-    private static final String SCORING_SERVER_URL="http://172.30.1.6:3012/api/judge";
 
     private final ProblemRepository problemRepository;
     private final TestcaseRepository testcaseRepository;

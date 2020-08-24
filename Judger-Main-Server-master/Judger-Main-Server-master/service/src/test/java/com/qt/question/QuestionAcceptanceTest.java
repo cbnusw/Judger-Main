@@ -35,8 +35,8 @@ class QuestionAcceptanceTest {
 
     private String questionId;
 
-    @Test
-    //@BeforeEach
+    //@Test
+    @BeforeEach
     @DisplayName("콘테스트 질문 등록 테스트")
     void createContest() throws Exception {
         System.out.println("콘테스트 질문 등록 테스트----");
