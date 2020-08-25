@@ -54,6 +54,13 @@ project(':admin') {
         compile project(':core')
     }
 }
+project(':professor') {
+    dependencies {
+        compile project(':admin')
+        compile project(':core')
+    }
+}
+
 
 project(':service'){
     dependencies{
