@@ -11,12 +11,14 @@ const StyledButton = styled.button`
     color: white;
     outline: none;
     cursor: pointer;
+    
+    width: 152px;
+    height: 35px;
 
-    background: ${palette.gray[8]};
+    background: ${palette.blue[10]};
     &:hover{
-        ackground:${palette.gray[6]};
+        ackground:${palette.blue[6]};
     }
-
     ${props =>
         props.fullWidth&&
         css`
