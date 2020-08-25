@@ -1,12 +1,16 @@
 import React from 'react';
 import Button from '../components/common/Button';
+import { Link } from 'react-router-dom';
+//import styled from 'styled-components';
+
+          
 
 const DashboardPage = () => {
     return (
         <div>
             <Button>대시</Button>
-            <h1>hi</h1>
-            <h2>bye</h2>
+            <br></br>
+            <Link to="/classroom"><Button>Classroom</Button></Link>
         </div>
     );   
 };

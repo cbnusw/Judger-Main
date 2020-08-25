@@ -50,7 +50,7 @@ const WhiteBox = styled.div`
          <AuthTemplateBlock>
             <WhiteBox>
                 <div className="logo-area">
-                    <Link to='/'>Online Judge</Link>
+                    <Link to='/' style={{ textDecoration: 'none', color:'black'}}>Online Judge</Link>
                 </div>
                 {children}
             </WhiteBox>           

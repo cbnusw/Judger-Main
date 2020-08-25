@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import palette from '../../lib/styles/palette';
-import { shadow, media } from '../../lib/styles/styleUtil';
+//import oc from 'open-color';
+import {  media } from '../../lib/styles/styleUtil';
 //import { Link } from 'react-router-dom';
+import Button from '../../components/common/Button';
 
 
 
-// 상단 고정, 그림자
+// 위치 고정, 그림자
 const Positioner = styled.div`
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0px;
+    top: 70px;
     width: 100%;
-    ${shadow(1)}
 `;
 
 // 흰 배경, 내용 중간 정렬
@@ -23,8 +23,8 @@ const WhiteBackground = styled.div`
     height: auto;
 `;
 
-// 해더의 내용
-const HeaderContents = styled.div`
+// 바디의 내용
+const BodyContents = styled.div`
     .logo-area{
         display: block;
         text-align: center;
@@ -38,11 +38,15 @@ const HeaderContents = styled.div`
         height: 40px;
     }
 
-    width: 1200px;
+
+    width: auto;
     height: 55px;
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    margin-left: 80px;
+    margin-top: 10px;
 
     padding-right: 1rem;
     padding-left: 2rem;
@@ -60,31 +64,21 @@ const Spacer = styled.div`
     flex-grow: 1;
 `;
 
-// 하단 그래디언트 테두리
-const GradientBorder = styled.div`
-    height: 3px;
-    background: linear-gradient(to right,  ${palette.gray[5]});
-`;
 
-const Header = ({children}) => {
+
+
+const BodyIndex = ({children}) => {
     return (
         <Positioner>
             <WhiteBackground>
-                <HeaderContents>
-                    <img className="logo-image" src={ require('../../image/logo-image.png') } alt="CBNU-logo"/>
-                    <div className="logo-area">
-                        <a href='/'
-                        style={{ textDecorationLine:'none',
-                        color:'black'}}
-                        >Online Judge</a>
-                    </div>
-                    <Spacer/>
+                <BodyContents>                   
                     {children}
-                </HeaderContents>
+                    <Spacer/>
+                </BodyContents>
             </WhiteBackground>
-            <GradientBorder/>
         </Positioner>
+        
     );
 };
 
-export default Header;
+export default BodyIndex;
