@@ -40,14 +40,14 @@ public class ClassroomApplicationService {
         return classroomApplicationRepository.save(new ClassroomApplication(classroom, user)).getId();
     }
 
-    //오류...
+
     @Transactional(readOnly = true)
     public ClassroomApplicationInfo findByClassroomApplicationId(Long classroomApplicationId) {
         ClassroomApplication classroomApplication = classroomApplicationRepository.findById(classroomApplicationId).orElseThrow(NotFoundClassroomApplicationException::new);
         return ClassroomApplicationInfo.builder()
                        .id(classroomApplication.getId())
                        .classroomInfo(modelMapper.map(classroomApplication.getClassroom(), ClassroomInfo.class))
-                       .userInfo(modelMapper.map(classroomApplication.getUser(), UserInfo.class)) //userinfo? userInfo?
+                       .userInfo(modelMapper.map(classroomApplication.getUser(), UserInfo.class))
                        .isApproved(classroomApplication.getIsApproved()).build();
     }
 
@@ -57,7 +57,7 @@ public class ClassroomApplicationService {
                        .map(classroomApplication -> ClassroomApplicationInfo.builder()
                                                           .id(classroomApplication.getId())
                                                           .classroomInfo(modelMapper.map(classroomApplication.getClassroom(), ClassroomInfo.class))
-                                                          .userInfo(modelMapper.map(classroomApplication.getUser(), UserInfo.class))  //userinfo? userInfo??
+                                                          .userInfo(modelMapper.map(classroomApplication.getUser(), UserInfo.class))
                                                           .isApproved(classroomApplication.getIsApproved()).build())
                        .collect(Collectors.toList());
     }
@@ -66,4 +66,6 @@ public class ClassroomApplicationService {
         ClassroomApplication classroomApplication= classroomApplicationRepository.findById(classroomApplicationId).orElseThrow(NotFoundClassroomApplicationException::new);
         classroomApplication.changeApproveStatus();
     }
+
+
 }

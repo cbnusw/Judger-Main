@@ -42,4 +42,5 @@ public class ClassroomApplicationController {
         return ResponseEntity.noContent().build();
     }
 
+    //postmapping 하고 classroom member
 }
