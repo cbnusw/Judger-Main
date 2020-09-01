@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Header from '../../components/base/Header';
 import styled from 'styled-components';
+import Header from '../../components/base/Header';
 //import { Link } from 'react-router-dom';
 
-// 하단 그래디언트 테두리
+
 const Headermenu = styled.div`
     .meun-ul{
         display: flex;
