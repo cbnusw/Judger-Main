@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderContainer from '../containers/Base/HeaderContainer';
-import BodyContainer from '../containers/Base/BodyContainer';
+import HeaderContainer from '../containers/base/HeaderContainer';
+import BodyContainer from '../containers/base/BodyContainer';
 
 
 

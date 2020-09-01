@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from './react';
+import styled from './styled-components';
 //import oc from 'open-color';
 import {  media } from '../../lib/styles/styleUtil';
 //import { Link } from 'react-router-dom';
-import Button from '../../components/common/Button';
+//import Button from '../../components/common/Button';
 
 
 

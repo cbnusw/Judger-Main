@@ -68,9 +68,9 @@ const Body = ({children}) => {
                     <Dropdown></Dropdown>
                     </div>      
                     <div className="Card-array">
-                            <Link to={"/classdetail"} style={{ textDecoration: 'none', paddingLeft:'30px' }}><Card></Card></Link>
-                            <Link to={"/classdetail"} style={{ textDecoration: 'none', paddingLeft:'100px' }}><Card></Card></Link>
-                            <Link to={"/classdetail"} style={{ textDecoration: 'none', paddingLeft:'100px' }}><Card></Card></Link>
+                            <Link to={"/classroom-Index/homework"} style={{ textDecoration: 'none', paddingLeft:'30px' }}><Card></Card></Link>
+                            <Link to={"/classroom-Index/homework"} style={{ textDecoration: 'none', paddingLeft:'100px' }}><Card></Card></Link>
+                            <Link to={"/classroom-Index/homework"} style={{ textDecoration: 'none', paddingLeft:'100px' }}><Card></Card></Link>
                     </div>
                     {children}
                 </BodyContents>
