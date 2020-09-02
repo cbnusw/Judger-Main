@@ -34,8 +34,12 @@ const HeaderContents = styled.div`
         letter-spacing: 2px;
     }
     .logo-image{
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 50px;
+    }
+    .logo-title{
+        width: 180px;
+        height: 50px;
     }
 
     width: 1200px;
@@ -72,12 +76,7 @@ const Header = ({children}) => {
             <WhiteBackground>
                 <HeaderContents>
                     <img className="logo-image" src={ require('../../image/logo-image.png') } alt="CBNU-logo"/>
-                    <div className="logo-area">
-                        <a href='/'
-                        style={{ textDecorationLine:'none',
-                        color:'black'}}
-                        >Online Judge</a>
-                    </div>
+                    <img className="logo-title" src={ require('../../image/logo-title.png') } alt="CBNU-logo"/>
                     <Spacer/>
                     {children}
                 </HeaderContents>
