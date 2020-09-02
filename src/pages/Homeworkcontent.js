@@ -2,8 +2,8 @@ import React from 'react';
 //import styled from 'styled-components';
 //import palette from '../../lib/styles/palette';
 //import { Link } from 'react-router-dom';
-import HeaderContainer from '../containers/base/HeaderContainer';
-import HomeworkIndex from '../containers/base/HomeworkIndex';
+import HeaderContainer from '../containers/Base/HeaderContainer';
+import HomeworkIndex from '../containers/Base/HomeworkIndex';
 
 
 

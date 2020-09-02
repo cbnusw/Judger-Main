@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 //import palette from '../../lib/styles/palette';
 //import { Link } from 'react-router-dom';
-import HeaderContainer from '../containers/base/HeaderContainer';
-import Testcontent from '../containers/base/ExamIndex/Testcontent';
-import Testcommit from '../containers/base/ExamIndex/Testcommit';
+import HeaderContainer from '../containers/Base/HeaderContainer';
+import Testcontent from '../containers/Base/ExamIndex/Testcontent';
+import Testcommit from '../containers/Base/ExamIndex/Testcommit';
 
 const Header = styled.div`
     border-bottom: 0.1px solid #707070;
