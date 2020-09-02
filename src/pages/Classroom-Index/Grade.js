@@ -2,9 +2,9 @@ import React from 'react';
 //import styled from './styled-components';
 //import palette from '../../lib/styles/palette';
 //import { Link } from 'react-router-dom';
-import HeaderContainer from '../../containers/base/HeaderContainer';
-import GD from '../../containers/base/ClassroomIndex/GD';
-import GradeBox from '../../containers/base/GradeBox';
+import HeaderContainer from '../../containers/Base/HeaderContainer';
+import GD from '../../containers/Base/ClassroomIndex/GD';
+import GradeBox from '../../containers/Base/GradeBox';
 
 
 
