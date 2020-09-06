@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../components/common/Button';
+import { Link } from 'react-router-dom';
 
 const CarouselPage = () => {
     return (
@@ -7,6 +8,8 @@ const CarouselPage = () => {
             <Button>login</Button>   
              
             <Button>sign up</Button>   
+
+            <Link to="/classroom"><Button>Classroom</Button></Link>
         </div>
     );   
 };

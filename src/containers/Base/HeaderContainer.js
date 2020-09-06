@@ -32,8 +32,7 @@ class HeaderContainer extends Component {
                 <Headermenu>
                     <ul className="meun-ul">
                         <li className="menu-li"><a href='/'
-                            style={{ textDecorationLine:'none',
-                            color:'black'}}>Home</a></li>
+                            style={{ textDecorationLine:'none', color:'black'}}>Home</a></li>
                         <li className="menu-li"><a href='/classroom'
                             style={{ textDecorationLine:'none',
                             color:'#1062E5'}}>Classroom</a></li>

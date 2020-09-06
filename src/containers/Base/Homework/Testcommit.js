@@ -87,7 +87,7 @@ class Testcontent extends Component {
                     </p>
                 </Comment>
             </CommentBox>
-            <Link to="/examCheck"><Button style={{ marginTop:'100px', marginLeft:'400px'}}>제출</Button></Link>
+            <Link to="/homeworkCheck"><Button style={{ marginTop:'60px', marginLeft:'400px'}}>제출</Button></Link>
         </div>
 
     );

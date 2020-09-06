@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 import { shadow, media } from '../../lib/styles/styleUtil';
+import { Link } from 'react-router-dom';
 //import { Link } from 'react-router-dom';
 
 
@@ -34,12 +35,12 @@ const HeaderContents = styled.div`
         letter-spacing: 2px;
     }
     .logo-image{
-        width: 60px;
-        height: 50px;
+        width: 50px;
+        height: 40px;
     }
     .logo-title{
         width: 180px;
-        height: 50px;
+        height: 43px;
     }
 
     width: 1200px;
@@ -74,12 +75,13 @@ const Header = ({children}) => {
     return (
         <Positioner>
             <WhiteBackground>
-                <HeaderContents>
+                <Link to="/"><HeaderContents>
                     <img className="logo-image" src={ require('../../image/logo-image.png') } alt="CBNU-logo"/>
                     <img className="logo-title" src={ require('../../image/logo-title.png') } alt="CBNU-logo"/>
                     <Spacer/>
                     {children}
                 </HeaderContents>
+                </Link>
             </WhiteBackground>
             <GradientBorder/>
         </Positioner>

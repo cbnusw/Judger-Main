@@ -73,7 +73,7 @@ const CardBody = styled.div`
     .GradeLog{
         padding-top: 17px;
         padding-left: 5%;
-        width: 200px;
+        width: 170px;
         height: 40px;
     }
     outline: none;
