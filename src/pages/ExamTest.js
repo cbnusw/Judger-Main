@@ -7,6 +7,7 @@ import Testcontent from '../containers/Base/ExamIndex/Testcontent';
 import Testcommit from '../containers/Base/ExamIndex/Testcommit';
 
 const Header = styled.div`
+window.scrollTo(0, 0);
     border-bottom: 0.1px solid #707070;
     .HeaderText{
         margin-bottom: 3px;
@@ -25,6 +26,7 @@ const Header = styled.div`
         width: 170px;
         height: 0px;
         border: 3px solid #000000;
+        background-color: black;
         opacity: 1;
     }
 `;
@@ -43,18 +45,19 @@ const HeaderArray = styled.div`
 
 const RestTime = styled.div`
     padding-top:4px;
-    margin-left:900px;
+    margin-left:950px;
     display:flex;
     width: 250px;
     height: 40px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 2px solid #377CD6;
+    border: 2px solid #B4B5B6;
     border-radius: 8px;
     opacity: 1;
+    
     .Header{
         width: 180px;
         height: 28px;
-        border-right: 1.5px solid #377CD6;
+        border-right: 1.5px solid #B4B5B6;
         font: normal normal 600 18px/30px Segoe UI;
         letter-spacing: 0px;
         color: #5D5D5D;

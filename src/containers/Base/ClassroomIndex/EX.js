@@ -14,14 +14,14 @@ const Positioner = styled.div`
     .classimage{
         margin-top:100px;
         width: 100%;
-        height: 200px;
+        height: 250px;
         position:relative
     }
 
     .backgroundcover{
-        background-color:#0404048C;
+        background-color:#4242429c;
         width: 100%;
-        height: 200px;
+        height: 250px;
         position:absolute;
         top:100px;
         left:0px    
@@ -63,11 +63,10 @@ const Positioner = styled.div`
         color: #FFFFFF;
         opacity: 1;
         position:absolute;
-        top:240px;
+        top:280px;
         left:85%; 
     }
 `;
-
 
 const Box = styled.div`
     width: 100%;
@@ -114,13 +113,11 @@ const Box = styled.div`
       width: 102px;
       height: 10px;        
       position:absolute;
-      top:340px;
+      top:390px;
       left:242px;  
     }
     
 `;
-
-
 
 
 class ClassroomIndex extends Component {
@@ -130,7 +127,7 @@ class ClassroomIndex extends Component {
                 <img className="classimage" src={ require('../../../image/classroom2.png') } alt="classroomimage"/>
                 <div className="backgroundcover"></div>
                 <p className="classname">확률과 통계</p>
-                <p className="semester">: 2020 -2 학기</p>
+                <p className="semester">: 2020 - 2 학기</p>
                 <p className="profname">교수님 성함</p>
                 <p className="subjectnum">과목번호 : 202020</p>
                 <Box>

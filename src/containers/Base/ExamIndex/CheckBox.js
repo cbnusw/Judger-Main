@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 //import palette from '../../lib/styles/palette';
 import { Link } from 'react-router-dom';
-import Button from '../../components/common/Button';
+import Button from '../../../components/common/Button';
 
 
 
@@ -21,11 +21,23 @@ const Header = styled.div`
     }
 `;
 
-const Body = styled.div`
+const Middle = styled.div`
     display:flex;
     margin-left: 100px;
     width: 1300px;
-    height: 400px;
+    height: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #aab7ad;
+    border-radius: 13px;
+    opacity: 1;
+`;
+
+const Body = styled.div`
+    display:flex;
+    margin-left: 100px;
+    margin-top:50px;
+    width: 1300px;
+    hei
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #aab7ad;
     border-radius: 9px;
@@ -34,8 +46,7 @@ const Body = styled.div`
 `;
 
 const Title = styled.div`
-    margin-top: 10px;
-    margin-left: 10px;
+    margin:20px 10px 20px 10px;
     width: 140px;
     height: 370px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -43,7 +54,26 @@ const Title = styled.div`
     opacity: 1;
 
     .ExText{
-        padding-top: 50px;
+        padding-top: 20px;
+        padding-left: 20px;
+        text-align: left;
+        font: normal normal 600 20px/13px Segoe UI;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+    }
+`;
+
+const TitleCode = styled.div`
+    margin:20px 10px 20px 10px;
+    width: 140px;
+    height: 100px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-right:2px solid  #ced4da;
+    opacity: 1;
+
+    .ExText{
+        padding-top: 20px;
         padding-left: 20px;
         text-align: left;
         font: normal normal 600 20px/13px Segoe UI;
@@ -54,13 +84,12 @@ const Title = styled.div`
 `;
 
 const Explanation = styled.div`
-    margin-top: 30px;
-    margin-left: 30px;
+    margin:30px 30px 50px 30px;
     width: 800px;
-    height: 330px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
     .ExText{
+        margin-bottom:35px;
         font: normal normal 600 15px/40px Segoe UI;
         letter-spacing: 0px;
         color: #000000;
@@ -96,8 +125,8 @@ const TestDate = styled.div`
 `;
 
 const DeadDate = styled.div`
-    padding:10px;
     width: 250px;
+    padding:10px;
     height: 110px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 2px solid #ced4da;
@@ -129,16 +158,29 @@ const Array = styled.div`
     display:inline;
 `;
 
+const Code = styled.div`
+    margin:30px 30px 50px 30px;
+    width: 800px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    .ExText{
+        margin-bottom:35px;
+        font: normal normal 600 15px/40px Segoe UI;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+    }
+`;
 
 const ExamTest = () => {
   return (
         <div style={{ marginBottom:'100px' }}>
         <Header>
-            <p className="HeaderText">Homework 1</p>
+            <p className="HeaderText">MIDDLE - EXAM</p>
         </Header>
-        <Body>
+        <Middle>
             <Title>
-                <p className="ExText">과제 정보</p>
+                <p className="ExText">시험 정보</p>
             </Title>
             <Array>
                 <Explanation>
@@ -151,23 +193,32 @@ const ExamTest = () => {
                     </p>
                     <Date>
                         <TestDate>
-                            <p className="TextArrayHead">시험 일시</p>
+                            <p className="TextArrayHead">시작 시간</p>
                             <p className="TextArray">2020년 6월 26일 금요일</p>
                             <p className="TextArray">오후 4시</p>
                         </TestDate>
                         <DeadDate>
-                            <p className="TextArrayHead">시험 일시</p>
+                            <p className="TextArrayHead">마감 시간</p>
                             <p className="TextArray">2020년 6월 26일 금요일</p>
                             <p className="TextArray">오후 4시</p>
                         </DeadDate>
                     </Date>
                 </Explanation>
             </Array>
+        </Middle>
+        <Body>
+            <TitleCode>
+                <p className="ExText">제출 코드</p>
+            </TitleCode>
+            <Code>
+                <p className="ExText">
+                1.   #include                                                                           
+                </p>
+            </Code>
+
         </Body>
-        <Link to="/HomeworkSubmit"><Button style={{ marginTop:'30px', marginLeft:'1200px'}}>과제 제출</Button></Link>
+        <Link to="/classroom-Index/Exam"><Button style={{ marginTop:'30px', marginLeft:'1200px'}}>돌아가기</Button></Link>
     </div>
-
-
   );    
 };
 

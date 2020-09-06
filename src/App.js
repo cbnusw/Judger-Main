@@ -9,7 +9,9 @@ import Grade from './pages/Classroom-Index/Grade';
 import Exam from './pages/Classroom-Index/Exam';
 import ExamTest from './pages/ExamTest';
 import Homeworkcontent from './pages/Homeworkcontent';
-
+import HomeworkCheck from './pages/HomeworkCheck';
+import HomeworkSubmit from './pages/HomeworkSubmit';
+import ExamCheck from './pages/ExamCheck';
 
 const App = () => {
   return (
@@ -19,11 +21,13 @@ const App = () => {
       <Route component={RegisterPage} path="/register" />
       <Route component={ClassroomPage} path="/classroom" />
       <Route component={ExamTest} path="/examTest" />
+      <Route component={ExamCheck} path="/examCheck" />
       <Route component={Homework} path="/classroom-Index/homework" />
       <Route component={Grade} path="/classroom-Index/grade" />
       <Route component={Exam} path="/classroom-Index/exam" />
       <Route component={Homeworkcontent} path="/homeworkcontent" />
-
+      <Route component={HomeworkCheck} path="/homeworkCheck" />
+      <Route component={HomeworkSubmit} path="/HomeworkSubmit" />
     </>
   );
 };
