@@ -5,8 +5,6 @@ import { shadow, media } from '../../lib/styles/styleUtil';
 import { Link } from 'react-router-dom';
 //import { Link } from 'react-router-dom';
 
-
-
 // 상단 고정, 그림자
 const Positioner = styled.div`
     display: flex;
@@ -15,6 +13,11 @@ const Positioner = styled.div`
     top: 0px;
     width: 100%;
     ${shadow(1)}
+`;
+
+const Box = styled.div`
+    height: 10px;
+    background: white;
 `;
 
 // 흰 배경, 내용 중간 정렬
@@ -44,13 +47,13 @@ const HeaderContents = styled.div`
     }
 
     width: 1200px;
-    height: 55px;
+    height: 65px;
     display: flex;
     flex-direction: row;
     align-items: center;
 
     padding-right: 1rem;
-    padding-left: 2rem;
+    padding-left: 13rem;
     ${media.wide`
         width: 992px;
     `}
@@ -74,13 +77,15 @@ const GradientBorder = styled.div`
 const Header = ({children}) => {
     return (
         <Positioner>
+            <Box></Box>
             <WhiteBackground>
-                <Link to="/"><HeaderContents>
+                <Link to="/">
+                    <HeaderContents>
                     <img className="logo-image" src={ require('../../image/logo-image.png') } alt="CBNU-logo"/>
                     <img className="logo-title" src={ require('../../image/logo-title.png') } alt="CBNU-logo"/>
                     <Spacer/>
                     {children}
-                </HeaderContents>
+                    </HeaderContents>
                 </Link>
             </WhiteBackground>
             <GradientBorder/>

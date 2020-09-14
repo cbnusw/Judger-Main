@@ -10,16 +10,15 @@ const Headermenu = styled.div`
         margin-top: 48px;
         /* flex로 내부 내용 정렬시킴 */
 
-
     }
     .menu-li{
         list-style:none;
         float:left;
         margin:0 0 1em; 
-        padding:8px 0 0 50px;
+        padding:8px 0 0 60px;
         text-align: center;
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 22px;
+        font-weight: semibold;
     }
 `;
 

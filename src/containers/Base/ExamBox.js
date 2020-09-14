@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 
 const Header = styled.div`
     display:flex;
-
     .HeaderText{
         margin-top: 50px;
         margin-left: 100px;
@@ -27,7 +26,7 @@ const Body = styled.div`
     width: 1300px;
     height: 400px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #343a40;
+    border: 2px solid rgba(16,113,174);
     border-radius: 13px;
     opacity: 1;
 
