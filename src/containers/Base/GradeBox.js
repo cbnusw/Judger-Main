@@ -18,7 +18,7 @@ const GradeIndex = styled.div`
     }
 `;
 const GradientBorder = styled.div`
-    width: 80%;
+    width: 1500px;
     margin:auto;
     box-shadow: 0px 3px 10px #00000029;
     border: 0.1px solid #707070;
@@ -67,13 +67,12 @@ const GradeBox = () => {
             <p className="Index">채점 결과</p>
           </GradeIndex>
           <GradientBorder/>
-          <div style={{ marginTop:'20px', marginBottom:'10px'}}>
-            <div className="CardArray" style={{ paddingBottom:'40px',position:'absolute', left:'13%'  }}>
+          <div style={{ marginTop:'20px', marginBottom:'10px', display:'flex', justifyContent:'space-evenly'}}>
+            <div className="CardArray" style={{ paddingBottom:'40px',position:'absolute' }}>
               <GDHW></GDHW>
               <GDHW></GDHW>
               <GDHW></GDHW>
               <GDHW></GDHW>
-
             </div>
           </div>
       </div>

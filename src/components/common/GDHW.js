@@ -6,8 +6,9 @@ import styled from 'styled-components';
 
 const CardBody = styled.div`
     padding-bottom:20px;
+    margin-right: 100px;
     .Cardborder{
-        width: 110%;
+        width: 130%;
         height: 60px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border-radius: 5px;

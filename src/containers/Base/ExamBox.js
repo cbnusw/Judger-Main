@@ -9,7 +9,6 @@ const Header = styled.div`
     display:flex;
     .HeaderText{
         margin-top: 50px;
-        margin-left: 100px;
         width: 368px;
         height: 67px;
         text-align: left;
@@ -22,7 +21,6 @@ const Header = styled.div`
 
 const Body = styled.div`
     display:flex;
-    margin-left: 100px;
     width: 1300px;
     height: 400px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -105,7 +103,7 @@ const Date = styled.div`
 
 const GradeBox = () => {
   return (
-      <div style={{ marginBottom:'100px' }}>
+      <div style={{ marginBottom:'100px' }} >
         <Header>
             <p className="HeaderText">MIDDLE - EXAM</p>
             <Link to="/examTest"><Button style={{ marginTop:'85px', marginLeft:'750px'}}>시험 시작하기</Button></Link>

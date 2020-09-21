@@ -28,18 +28,21 @@ const BodyContents = styled.div`
     .Array{
         display : flex;
         padding-bottom:40px;
-        padding-top:30px;
+        padding-top:50px;
+        margin-left: 200px;
     }
 
     .Card-array{
         display : inline-flex;
+        margin-top: 40px;
     }
+
     width: 2000px;
     display: inline;
     flex-direction: row;
     align-items: center;
 
-    margin-left: 80px;
+
     margin-top: 80px;
 
 
@@ -67,10 +70,10 @@ const Body = ({children}) => {
                     <Button>신청하기</Button>
                     <Dropdown></Dropdown>
                     </div>      
-                    <div className="Card-array">
-                            <Link to={"/classroom-Index/homework"} style={{ textDecoration: 'none', paddingLeft:'30px' }}><Card></Card></Link>
-                            <Link to={"/classroom-Index/homework"} style={{ textDecoration: 'none', paddingLeft:'100px' }}><Card></Card></Link>
-                            <Link to={"/classroom-Index/homework"} style={{ textDecoration: 'none', paddingLeft:'100px' }}><Card></Card></Link>
+                    <div className="Card-array" style={{  display:'flex', justifyContent:'space-evenly'}}>
+                            <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
+                            <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
+                            <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
                     </div>
                     {children}
                 </BodyContents>

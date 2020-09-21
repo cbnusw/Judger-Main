@@ -16,8 +16,8 @@ const Headermenu = styled.div`
         float:left;
         margin:0 0 1em; 
         padding:8px 0 0 60px;
-        text-align: center;
-        font-size: 22px;
+        text-align: left;
+        font-size: 25px;
         font-weight: semibold;
     }
 `;

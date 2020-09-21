@@ -38,15 +38,15 @@ const HeaderContents = styled.div`
         letter-spacing: 2px;
     }
     .logo-image{
-        width: 50px;
-        height: 40px;
+        width: 60px;
+        height: 50px;
     }
     .logo-title{
         width: 180px;
-        height: 43px;
+        height: 50px;
     }
 
-    width: 1200px;
+    width: 1500px;
     height: 65px;
     display: flex;
     flex-direction: row;

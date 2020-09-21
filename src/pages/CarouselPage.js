@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 const CarouselPage = () => {
     return (
         <div>
-            <Button>login</Button>   
+            <Link to="/login"><Button>login</Button></Link>  
              
             <Button>sign up</Button>   
 
             <Link to="/classroom"><Button>Classroom</Button></Link>
+
+            <Link to="/test/imagepass"><Button>test</Button></Link>  
         </div>
     );   
 };

@@ -68,7 +68,6 @@ const Positioner = styled.div`
     }
 `;
 
-
 const Box = styled.div`
     width: 100%;
     height: 50px;
@@ -119,8 +118,6 @@ const Box = styled.div`
     }
     
 `;
-
-
 
 
 class ClassroomIndex extends Component {

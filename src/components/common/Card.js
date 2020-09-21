@@ -6,34 +6,38 @@ import styled from 'styled-components';
 
 const CardBody = styled.div`
     .Cardheadertext{
-        font-size:13px;
+        font-size:18px;
         margin-bottom: 5px;
+        text-decoration:none;
     }
     .Cardborder{
-        width: 350px;
-        height: 250px;
+        width: 400px;
+        height: 300px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 2px 10px #00000054;
         border: 1px solid #377CD6;
         opacity: 1;
+        text-decoration:none;
 
     }
     .Cardheader{
-        margin-top: 60px;
-        margin-left: 80px;
+        margin-top: 80px;
+        margin-left:120px;
         color: black;
         fontWeight: bold;
-        fontSize:20px;
+        fontSize:25px;
         font-size:x-large;
         font-weight: bold;
     }
     .Cardbody{
         margin-top:20px;
-        margin-left: 80px;
+        margin-left: 120px;
     }
     .Cardtext{
         margin-bottom:5px;
         color:black;
+        text-decoration:none;
+        font-size:18px;
     }
     outline: none;
     cursor: pointer;

@@ -15,7 +15,7 @@ class Dropdown extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-0.5"></div>
-          <div className="col-md-3">
+          <div className="col-md-4">
             <Select options={Season} />
           </div>
           <div className="col-md-1"></div>
