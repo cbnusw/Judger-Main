@@ -8,43 +8,14 @@ import Dropdown from '../../components/common/Dropdown';
 import Card from '../../components/common/Card';
 
 
-// 위치 고정, 그림자
-const Positioner = styled.div`
-    display: flex;
-    flex-direction: column;
-    top: 70px;
-    width: 100%;
-`;
-
-// 흰 배경, 내용 중간 정렬
-const WhiteBackground = styled.div`
-    background: white;
-    display: flex;
-    height: auto;
-`;
-
 // 바디의 내용
 const BodyContents = styled.div`
-    .Array{
-        display : flex;
-        padding-bottom:40px;
-        padding-top:50px;
-        margin-left: 200px;
-    }
-
-    .Card-array{
-        display : inline-flex;
-        margin-top: 40px;
-    }
-
     width: 2000px;
     display: inline;
     flex-direction: row;
     align-items: center;
 
-
-    margin-top: 80px;
-
+    margin-top: 100px;
 
     padding-right: 1rem;
     padding-left: 2rem;
@@ -55,31 +26,42 @@ const BodyContents = styled.div`
     ${media.tablet`
         width: 100%;
     `}
+
+    .Array{
+        display : flex;
+        margin-bottom:40px;
+        margin-top:80px;
+        margin-left: 200px;
+    }
+
+    .Card-array{
+        margin: 40px 200px 40px 200px;
+        display : inline-flex;
+    }
+
 `;
-
-
 
 
 
 const Body = ({children}) => {
     return (
-        <Positioner>
-            <WhiteBackground>
-                <BodyContents>
-                    <div className="Array">
-                    <Button>신청하기</Button>
-                    <Dropdown></Dropdown>
-                    </div>      
-                    <div className="Card-array" style={{  display:'flex', justifyContent:'space-evenly'}}>
-                            <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
-                            <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
-                            <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
-                    </div>
-                    {children}
-                </BodyContents>
-            </WhiteBackground>
-        </Positioner>
-        
+        <BodyContents>
+            <div className="Array">
+            <Button>신청하기</Button>
+            <Dropdown></Dropdown>
+            </div>      
+            <div className="Card-array" style={{  display:'flex', justifyContent:'space-evenly'}}>
+                    <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
+                    <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
+                    <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
+            </div>
+            <div className="Card-array" style={{  display:'flex', justifyContent:'space-evenly'}}>
+                    <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
+                    <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
+                    <Link to={"/classroom-Index/homework"} style={{ textDecoration:'none'}}><Card></Card></Link>
+            </div>
+            {children}
+        </BodyContents>
     );
 };
 

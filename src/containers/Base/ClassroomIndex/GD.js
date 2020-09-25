@@ -10,60 +10,60 @@ const Positioner = styled.div`
     flex-direction: column;
     top: 70px;
     width: 100%;
+    margin-top:100px;
 
     .classimage{
-        margin-top:100px;
+        display: block; 
+        margin: 0px auto;
+        border-radius: 1px 1px 0 0;
         width: 100%;
-        height: 250px;
+        height: 230px;
         position:relative
     }
 
     .backgroundcover{
         background-color:#4242429c;
+        border-radius: 1px 1px 0 0;
         width: 100%;
-        height: 250px;
+        height: 230px;
         position:absolute;
-        top:100px;
-        left:0px    
     }
     
     .classname{
-        font: normal normal normal 40px/65px Hancom Gothic;
+        font: normal normal normal 33px/65px NanumGothic;
         letter-spacing: 2px;
-        color: #FFFFFF;
+        color: #ffffff;
         opacity: 1;
         position:absolute;
         top:150px;
-        left:100px   
+        left:200px   
     }
 
     .semester{
-        font: normal normal normal 20px/65px Hancom Gothic;
+        font: normal normal normal 18px/65px NanumGothic;
         letter-spacing: 2px;
         color: #FFFFFF;
         opacity: 1;
         position:absolute;
         top:160px;
-        left:320px   
+        left:420px   
     }
-    
     .profname{
-        font: normal normal normal 20px/65px Hancom Gothic;
+        font: normal normal normal 18px/65px NanumGothic;
         letter-spacing: 2px;
         color: #FFFFFF;
         opacity: 1;
         position:absolute;
         top:200px;
-        left:190px  
+        left:220px  
     }
-
     .subjectnum{
-        font: normal normal normal 18px/65px Hancom Gothic;
+        font: normal normal normal 16px/65px NanumGothic;
         letter-spacing: 2px;
         color: #FFFFFF;
         opacity: 1;
         position:absolute;
-        top:280px;
+        top:260px;
         left:85%; 
     }
 `;
@@ -114,12 +114,10 @@ const Box = styled.div`
       width: 102px;
       height: 10px;        
       position:absolute;
-      top:390px;
+      top:370px;
       left:393px   
     }
-    
 `;
-
 
 
 

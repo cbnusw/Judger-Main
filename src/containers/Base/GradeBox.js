@@ -7,7 +7,7 @@ import GDHW from '../../components/common/GDHW';
 const GradeIndex = styled.div`
     display:flex;
     margin-top: 60px;
-    padding-left:16%;
+    padding-left:10%;
     .Index{
         height: 31px;
         text-align: left;
@@ -17,12 +17,13 @@ const GradeIndex = styled.div`
         opacity: 1;
     }
 `;
+
 const GradientBorder = styled.div`
-    width: 1500px;
-    margin:auto;
+    width: 1300px;height:0.1px;
     box-shadow: 0px 3px 10px #00000029;
     border: 0.1px solid #707070;
-    opacity: 1;
+    left:0; right:0; margin-left:auto; margin-right:auto;
+    top: 0; bottom:0; margin-top:auto; margin-bottom:auto; 
 `;
 
 const SearchBar = styled.div`
@@ -68,7 +69,7 @@ const GradeBox = () => {
           </GradeIndex>
           <GradientBorder/>
           <div style={{ marginTop:'20px', marginBottom:'10px', display:'flex', justifyContent:'space-evenly'}}>
-            <div className="CardArray" style={{ paddingBottom:'40px',position:'absolute' }}>
+            <div style={{ paddingBottom:'40px',position:'absolute' }}>
               <GDHW></GDHW>
               <GDHW></GDHW>
               <GDHW></GDHW>

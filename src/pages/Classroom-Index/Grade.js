@@ -20,7 +20,6 @@ const Homework = () => {
           <Array>
             <GradeBox/>
           </Array>
-
           <HeaderContainer/>
       </div>
 

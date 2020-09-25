@@ -25,8 +25,8 @@ const CardBody = styled.div`
         margin-bottom: 5px;
     }
     .Cardborder{
-        width: 550px;
-        height: 100px;
+        width: 500px;
+        height: 90px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border-radius: 5px;
         box-shadow: 0px 2px 10px #00000054;

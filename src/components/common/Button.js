@@ -12,7 +12,7 @@ const StyledButton = styled.button`
     outline: none;
     cursor: pointer;
     
-    width: 152px;
+    width: 140px;
     height: 35px;
 
     background: ${palette.blue[10]};

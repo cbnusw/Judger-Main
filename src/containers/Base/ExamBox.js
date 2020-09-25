@@ -10,9 +10,9 @@ const Header = styled.div`
     .HeaderText{
         margin-top: 50px;
         width: 368px;
-        height: 67px;
+        height: 50px;
         text-align: left;
-        font: normal normal 600 40px/50px Segoe UI;
+        font: normal normal 600 35px Segoe UI;
         letter-spacing: 0px;
         color: #181647;
         opacity: 1;
@@ -24,10 +24,9 @@ const Body = styled.div`
     width: 1300px;
     height: 400px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 2px solid rgba(16,113,174);
+    border: 5px solid #EBEBEB;
     border-radius: 13px;
     opacity: 1;
-
 `;
 
 const Explanation = styled.div`
@@ -106,7 +105,7 @@ const GradeBox = () => {
       <div style={{ marginBottom:'100px' }} >
         <Header>
             <p className="HeaderText">MIDDLE - EXAM</p>
-            <Link to="/examTest"><Button style={{ marginTop:'85px', marginLeft:'750px'}}>시험 시작하기</Button></Link>
+            <Link to="/examTest"><Button style={{ marginTop:'70px', marginLeft:'750px'}}>시험 시작하기</Button></Link>
         </Header>
         <Body>
             <Explanation>

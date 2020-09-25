@@ -17,7 +17,7 @@ const Positioner = styled.div`
         margin: 0px auto;
         border-radius: 1px 1px 0 0;
         width: 100%;
-        height: 250px;
+        height: 230px;
         position:relative
     }
 
@@ -25,12 +25,12 @@ const Positioner = styled.div`
         background-color:#4242429c;
         border-radius: 1px 1px 0 0;
         width: 100%;
-        height: 250px;
+        height: 230px;
         position:absolute;
     }
     
     .classname{
-        font: normal normal normal 38px/65px NanumGothic;
+        font: normal normal normal 33px/65px NanumGothic;
         letter-spacing: 2px;
         color: #ffffff;
         opacity: 1;
@@ -48,7 +48,6 @@ const Positioner = styled.div`
         top:160px;
         left:420px   
     }
-    
     .profname{
         font: normal normal normal 18px/65px NanumGothic;
         letter-spacing: 2px;
@@ -56,19 +55,19 @@ const Positioner = styled.div`
         opacity: 1;
         position:absolute;
         top:200px;
-        left:300px  
+        left:220px  
     }
-
     .subjectnum{
-        font: normal normal normal 18px/65px NanumGothic;
+        font: normal normal normal 16px/65px NanumGothic;
         letter-spacing: 2px;
         color: #FFFFFF;
         opacity: 1;
         position:absolute;
-        top:280px;
+        top:260px;
         left:85%; 
     }
 `;
+
 
 const Box = styled.div`
     width: 100%;
@@ -76,8 +75,6 @@ const Box = styled.div`
     background:  #EBEBEB 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
     opacity: 0.83;
-    display: block; 
-    margin: 0px auto;
 
     .meun-ul{
       display: flex;
@@ -117,10 +114,9 @@ const Box = styled.div`
       width: 102px;
       height: 10px;        
       position:absolute;
-      top:390px;
-      left:242px;  
+      top:370px;
+      left:242px   
     }
-    
 `;
 
 class ClassroomIndex extends Component {

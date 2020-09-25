@@ -16,7 +16,7 @@ const Positioner = styled.div`
 `;
 
 const Box = styled.div`
-    height: 10px;
+    height: 1px;
     background: white;
 `;
 
@@ -39,21 +39,21 @@ const HeaderContents = styled.div`
     }
     .logo-image{
         width: 60px;
-        height: 50px;
+        height:50px;
     }
     .logo-title{
-        width: 180px;
-        height: 50px;
+        width: 160px;
+        height: 40px;
     }
 
     width: 1500px;
-    height: 65px;
+    height: 55px;
     display: flex;
     flex-direction: row;
     align-items: center;
 
     padding-right: 1rem;
-    padding-left: 13rem;
+    padding-left: 10rem;
     ${media.wide`
         width: 992px;
     `}
@@ -65,7 +65,7 @@ const HeaderContents = styled.div`
 
 // 중간 여백
 const Spacer = styled.div`
-    flex-grow: 1;
+    flex-grow: 0.5;
 `;
 
 // 하단 그래디언트 테두리
@@ -79,7 +79,7 @@ const Header = ({children}) => {
         <Positioner>
             <Box></Box>
             <WhiteBackground>
-                <Link to="/">
+                <Link to="/" style={{ textDecoration:'none', color:'black'}}> 
                     <HeaderContents>
                     <img className="logo-image" src={ require('../../image/logo-image.png') } alt="CBNU-logo"/>
                     <img className="logo-title" src={ require('../../image/logo-title.png') } alt="CBNU-logo"/>

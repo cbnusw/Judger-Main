@@ -6,9 +6,10 @@ import styled from 'styled-components';
 
 const CardBody = styled.div`
     padding-bottom:20px;
-    margin-right: 100px;
+    left:0; right:0; margin-left:auto; margin-right:auto;
+    top: 0; bottom:0; margin-top:auto; margin-bottom:auto;
     .Cardborder{
-        width: 130%;
+        width: 1300px;
         height: 60px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border-radius: 5px;
@@ -19,7 +20,7 @@ const CardBody = styled.div`
     }
     .Cardindex{
         padding-top: 13px;
-        padding-left: 40px;
+        padding-left: 10%;
         text-align: center;
         text-decoration: underline;
         font: normal normal 600 20px/28px Segoe UI;
@@ -51,7 +52,7 @@ const CardBody = styled.div`
     }
     .Carddate{
         padding-top: 17px;
-        padding-left: 13%;
+        padding-left: 10%;
         width: 300px;
         height: 31px;
         text-align: left;

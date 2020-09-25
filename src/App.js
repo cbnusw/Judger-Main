@@ -13,6 +13,7 @@ import HomeworkCheck from './pages/HomeworkCheck';
 import HomeworkSubmit from './pages/HomeworkSubmit';
 import ExamCheck from './pages/ExamCheck';
 import ImagePass from './pages/test/imagepass';
+import DashboardPage from './pages/DashboardPage';
 
 const App = () => {
   return (
@@ -30,6 +31,8 @@ const App = () => {
       <Route component={Homeworkcontent} path="/homeworkcontent" />
       <Route component={HomeworkCheck} path="/homeworkCheck" />
       <Route component={HomeworkSubmit} path="/HomeworkSubmit" />
+
+      <Route component={DashboardPage} path="/DashboardPage" />
 
     </>
   );

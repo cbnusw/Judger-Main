@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from '../../components/base/Header';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Headermenu = styled.div`
     .meun-ul{
         display: flex;
-        margin-top: 48px;
-        /* flex로 내부 내용 정렬시킴 */
-
+        margin-top: 48px;  /* flex로 내부 내용 정렬시킴 */
+        text-decoration-line: none;
     }
     .menu-li{
+        text-align: center; 
         list-style:none;
         float:left;
         margin:0 0 1em; 
         padding:8px 0 0 60px;
-        text-align: left;
-        font-size: 25px;
-        font-weight: semibold;
+        font-size: 20px;
+        font-weight: bold;
     }
+    .menu-li:hover{
+          color : #1062E5;
+      }
 `;
 
 
@@ -30,14 +32,15 @@ class HeaderContainer extends Component {
             <Header>
                 <Headermenu>
                     <ul className="meun-ul">
-                        <li className="menu-li"><a href='/'
-                            style={{ textDecorationLine:'none', color:'black'}}>Home</a></li>
-                        <li className="menu-li"><a href='/classroom'
-                            style={{ textDecorationLine:'none',
-                            color:'#1062E5'}}>Classroom</a></li>
-                        <li className="menu-li"><a href='/'
-                            style={{ textDecorationLine:'none',
-                            color:'black'}}>Contest</a></li>
+                        <li className="menu-li">
+                            <Link to={"/DashboardPage"} style={{ textDecoration:'none', color:'black'}}>Dashboard</Link>
+                        </li>
+                        <li className="menu-li">
+                            <Link to={"/classroom"} style={{ textDecoration:'none',color:'#1062E5'}}>Classroom</Link>
+                        </li>
+                        <li className="menu-li">
+                            <Link to={"/"} style={{ textDecoration:'none', color:'black'}}>Contest</Link>
+                        </li>
                     </ul>
                 </Headermenu>
             </Header>
