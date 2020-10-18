@@ -28,6 +28,8 @@ public class ProblemController {
         this.problemService = problemService;
         this.testcaseService = testcaseService;
     }
+
+    //등록된 모든 문제 정보 조회
   //테스트 완료 : 업로드했던 문제들의 목록 정보들이 나옴
     @GetMapping
     public ResponseEntity<List<ProblemResponseInfo>> showAllProblems() {
@@ -42,6 +44,7 @@ public class ProblemController {
         return ResponseEntity.created(URI.create("/problems/" + problemId)).build();
     }
 
+    //등록된 특정 문제정보 조회
     //테스트 완료: localhost:8080/problems/{id}를치면 id에맞는 문제의 정보들이나옴
     @GetMapping("/{id}")
     public ResponseEntity<ProblemResponseInfo> showProblem(@PathVariable Long id) {
@@ -60,6 +63,7 @@ public class ProblemController {
                 .body(fileInfo.getResource());
     }
 
+    //문제 업데이트
     //테스트 완료: localhost:8080/probles/{id}에 대해서 파라미터와 파일을 post로 전송을하면 테이블에서 그 id에 대한 정보들이 업데이트됨
     //postman으로 json형식으로 dto객체를 보낼수있지만, file까지 같이보낼경우 둘다 json형식으로 하든, 파라미터 파일형식으로 전달해야한다.
     @PostMapping("/{id}")
@@ -72,6 +76,7 @@ public class ProblemController {
         return ResponseEntity.noContent().build();
     }
 
+    //문제 삭제
     //테스트 완료: localhost:8080/problems/{id} 에대해서 Delete방식으로 파라미터없이전송하면 테이블내에서 그 id에 대한 정보들이 삭제됨
     @DeleteMapping("/{id}")
     public ResponseEntity deleteProblem(@PathVariable Long id) throws IOException {
@@ -79,6 +84,7 @@ public class ProblemController {
         return ResponseEntity.noContent().build();
     }
 
+    //테스트케이스 등록
     //테스트 완료: localhost:8080/problems/{id}/testcase 에 대해서 post방식으로 input 파일과 output파일을 보내면 그 id를 가진 디렉터리내에 테스트케이스 파일들이 저장됨(in, out)
     @PostMapping("/{id}/testcase")
     public ResponseEntity uploadTestcases(@PathVariable Long id, @RequestParam List<MultipartFile> in, @RequestParam List<MultipartFile> out) throws IOException {

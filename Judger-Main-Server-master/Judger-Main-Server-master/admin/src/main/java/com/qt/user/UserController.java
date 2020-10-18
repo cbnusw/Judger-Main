@@ -18,7 +18,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    //모든 유저들의 정보 조회
+    //가입된 모든 유저들의 정보 조회
     @GetMapping
     public ResponseEntity<List<UserInfo>> findAllUsers() {
         List<UserInfo> userInfos = userService.findAllUsers();

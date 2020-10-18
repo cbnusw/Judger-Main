@@ -16,7 +16,7 @@ public class ContestProblemRegistrationController {
         this.contestProblemRegistrationService = contestProblemRegistrationService;
     }
 
-    //특정 콘테스트에 문제추가
+    //특정 콘테스트에 문제 추가
     @PostMapping("/{contestId}/problems")
     public ResponseEntity registerProblems(@PathVariable Long contestId, @RequestParam List<Long> problemIds) {
         contestProblemRegistrationService.register(contestId, problemIds);

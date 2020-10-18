@@ -24,6 +24,7 @@ public class SubmitController {
     }
 
     //코드 제출(문제)
+    //테이블에 제출 언어나, 채점결과등이 저장됨
     @PostMapping("/submit/problems/{pid}/users/{uid}")
     public ResponseEntity submitProblem(@PathVariable("pid") Long problemId, @PathVariable("uid") Long userId, SubmitRequest submitRequest) {
         submitService.Save(problemId, userId, submitRequest);
@@ -52,7 +53,7 @@ public class SubmitController {
 
 
 
-    //결과 확인
+    //결과 조회
     @GetMapping("submit/{id}")
     public ResponseEntity submitResult(@PathVariable("id") Long submitId) {
         SubmitResponse submitResponse =submitService.findByid(submitId);
