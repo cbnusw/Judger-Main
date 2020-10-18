@@ -20,11 +20,11 @@ import java.net.URL;
 @Service
 public class SubmitService {
     //메인서버의 코드, 테스트케이스를 json형식으로 채점서버로 post방식으로 전송
-    private static final String LOCAL_PROBLEM_STORAGE_PATH = "C:\\Users\\jtm06\\javaProject\\git_home\\Judger-Main-Server-master\\Judger-Main-Server-master\\admin\\src\\main\\resources\\problems";
-    private static final String TEST_CASE_PATH = "/tc";
-    private static final String TEST_CASE_INPUT_PATH = "/in";
-    private static final String TEST_CASE_OUTPUT_PATH = "/out";
-    private static final String SCORING_SERVER_URL = "http://172.30.1.6:3012/api/judge";
+    protected static final String LOCAL_PROBLEM_STORAGE_PATH = "C:\\Users\\jtm06\\javaProject\\git_home\\Judger-Main-Server-master\\Judger-Main-Server-master\\admin\\src\\main\\resources\\problems";
+    protected static final String TEST_CASE_PATH = "/tc";
+    protected static final String TEST_CASE_INPUT_PATH = "/in";
+    protected static final String TEST_CASE_OUTPUT_PATH = "/out";
+    protected static final String SCORING_SERVER_URL = "http://192.168.0.37:3012/api/judge";
     //테스트케이스파일 개수
 
     int testCase_Num = 1;
@@ -41,6 +41,8 @@ public class SubmitService {
         this.submitRepository = submitRepository;
         this.modelMapper = modelMapper;
     }
+
+
 
     public void Save(Long problemId, Long userId, SubmitRequest submitRequest) {
         String response=ReadTestCase(problemId,submitRequest);
