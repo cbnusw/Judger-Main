@@ -3,6 +3,7 @@ package com.qt.domain.homework;
 import com.qt.domain.homework.dto.HomeworkInfo;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -35,9 +36,11 @@ public class Homework {
     private String homeworkDescription;
 
     @NotNull
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate;
 
     @NotNull
+    @DateTimeFormat(pattern = "HH:mm")
     private LocalTime endTime;
 
 

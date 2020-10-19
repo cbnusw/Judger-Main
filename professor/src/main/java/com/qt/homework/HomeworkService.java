@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 public class HomeworkService {
 
     //Server 연동시 바꿔줄것(Linux 환경에서 교체)
-    private static final String LOCAL_PROBLEM_STORAGE_PATH = "D:/osscenter/mainserver/admin/src/main/resources/homework"; //PATH (Desktop 기준)
+    private static final String LOCAL_PROBLEM_STORAGE_PATH = "C:/Users/ygkwo/Desktop/test"; //PATH (Desktop 기준)
 
     private static final String FILE_PATH = "file:";
 
@@ -49,9 +49,9 @@ public class HomeworkService {
                        .collect(Collectors.toList());
     }
 
-    //ProblemService와 비교
+
     public Long save(HomeworkInfo homeworkInfo, MultipartFile file) throws IOException {
-        String identifier = saveHomeworkFile(file, homeworkInfo.getHomeworkName()); //오류찾기...
+        String identifier = saveHomeworkFile(file, homeworkInfo.getHomeworkName());
 
         Homework homework = new Homework(homeworkInfo.getSubjectNumber(),homeworkInfo.getHomeworkName(), identifier, homeworkInfo.getHomeworkDescription(), homeworkInfo.getEndDate(),homeworkInfo.getEndTime());
         return homeworkRepository.save(homework).getId();
@@ -71,7 +71,8 @@ public class HomeworkService {
     public FileInfo findHomeworkFile(Long id) throws IOException{
         Homework homework=homeworkRepository.findById(id).orElseThrow(NotFoundHomeworkException::new);
         String identifier= homework.getIdentifier();
-        Resource resource=resourceLoader.getResource(FILE_PATH+LOCAL_PROBLEM_STORAGE_PATH + identifier +"/" + homework.getHomeworkName());
+        //PATH+identifier
+        Resource resource=resourceLoader.getResource(FILE_PATH+LOCAL_PROBLEM_STORAGE_PATH  +"/" + homework.getHomeworkName());
 
         return FileInfo.builder()
                         .contentDisposition(homework.getHomeworkName())
@@ -98,7 +99,7 @@ public class HomeworkService {
 
     private String saveHomeworkFile(MultipartFile file, String name) throws IOException {
         String identifier = UUID.randomUUID().toString();
-        String directory = LOCAL_PROBLEM_STORAGE_PATH + identifier;
+        String directory = LOCAL_PROBLEM_STORAGE_PATH ; //+identifier
         new File(directory).mkdir();
 
         File dest = new File(directory + "/" + name);
@@ -112,6 +113,5 @@ public class HomeworkService {
         resource.getFile().delete();
         return homework;
     }
-
 
 }

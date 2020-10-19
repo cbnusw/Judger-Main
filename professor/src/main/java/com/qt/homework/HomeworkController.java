@@ -31,7 +31,7 @@ public class HomeworkController {
 
 
     @PostMapping
-    public ResponseEntity createHomework(@ModelAttribute HomeworkInfo homeworkInfo, @RequestParam MultipartFile file) throws IOException {
+    public ResponseEntity createHomework(@ModelAttribute HomeworkInfo homeworkInfo, MultipartFile file) throws IOException {
         Long homeworkId = homeworkService.save(homeworkInfo, file);
         return ResponseEntity.created(URI.create("/homeworks/" + homeworkId)).build();
     }

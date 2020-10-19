@@ -24,11 +24,13 @@ public class ClassroomApplicationController {
         return ResponseEntity.created(URI.create("/classrooms/apply/" + classroomApplicationId)).build();
     }
 
+    //don't need
     @GetMapping("/apply/{classroomApplicationId}")
     public ResponseEntity<ClassroomApplicationInfo> showClassroomApplication(@PathVariable Long classroomApplicationId) {
         ClassroomApplicationInfo classroomApplicationInfo = classroomApplicationService.findByClassroomApplicationId(classroomApplicationId);
         return ResponseEntity.ok(classroomApplicationInfo);
     }
+
 
     @GetMapping("/{classroomId}/apply")
     public ResponseEntity<List<ClassroomApplicationInfo>> showClassroomApplications(@PathVariable Long classroomId) {
@@ -41,6 +43,8 @@ public class ClassroomApplicationController {
         classroomApplicationService.changeApproveStatus(classroomApplicationId);
         return ResponseEntity.noContent().build();
     }
+
+
 
     //postmapping 하고 classroom member
 }

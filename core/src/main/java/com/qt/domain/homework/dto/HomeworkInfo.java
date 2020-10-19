@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
 import javax.persistence.Lob;
@@ -32,9 +33,11 @@ public class HomeworkInfo {
     private String homeworkDescription;
 
     @NotNull
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDate;
 
     @NotNull
+    @DateTimeFormat(pattern = "HH:mm")
     private LocalTime endTime;
 
     @Builder
