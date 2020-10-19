@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface ClassroomApplicationRepository extends JpaRepository<ClassroomApplication, Long> {
     List<ClassroomApplication> findAllByClassroomId(Long classroomId);
+    List<ClassroomApplication> findAllByUserId(Long userId);
 }

@@ -51,6 +51,15 @@ public class ClassroomApplicationService {
                        .isApproved(classroomApplication.getIsApproved()).build();
     }
 
+    //ClassroomApplicationservice에서 classroom별로 user 긁어오기
+//    @Transactional(readOnly = true)
+//    public List<ClassroomApplicationInfo> findByClassroomId(Long classroomId) {
+//        ClassroomApplication classroomApplication = classroomApplicationRepository.findById(classroomId).orElseThrow(NotFoundClassroomApplicationException::new);
+//
+//        return ;
+//    }
+
+    //error
     @Transactional(readOnly = true)
     public List<ClassroomApplicationInfo> findAllByClassroomId(Long classroomId) {
         return classroomApplicationRepository.findAllByClassroomId(classroomId).stream()
@@ -61,6 +70,15 @@ public class ClassroomApplicationService {
                                                           .isApproved(classroomApplication.getIsApproved()).build())
                        .collect(Collectors.toList());
     }
+
+    @Transactional(readOnly = true)
+    public List getApplicationList()
+    {
+        classroomApplicationRepository.findAll();
+
+        return classroomApplicationRepository.findAll();
+    }
+
 
     public void changeApproveStatus(Long classroomApplicationId) {
         ClassroomApplication classroomApplication= classroomApplicationRepository.findById(classroomApplicationId).orElseThrow(NotFoundClassroomApplicationException::new);
