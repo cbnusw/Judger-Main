@@ -54,11 +54,11 @@ export default class SimpleSlider extends Component {
     const settings = {
       arrows:false,
       infinite: true,
-      speed: 500,
+      speed: 4000,
       slidesToShow: 1,
       slidesToScroll:1,
       autoplay:true, //true
-      autoplaySpeed:2000,
+      autoplaySpeed:1500,
       pauseOnHover: false,
       fade: true
     };
