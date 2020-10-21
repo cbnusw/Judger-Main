@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import '../../../index.css';
 //import CLAIndex from '../../components/base/CLAIndex';
 //import Homework from '../../pages/Classroom/Homework';
 //import styled from 'styled-components';
@@ -31,6 +32,7 @@ const Positioner = styled.div`
     
     .classname{
         font: normal normal normal 33px/65px NanumGothic;
+        font-size: 2.5em;
         letter-spacing: 2px;
         color: #ffffff;
         opacity: 1;

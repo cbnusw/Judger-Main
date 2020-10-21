@@ -31,6 +31,7 @@ const Positioner = styled.div`
     
     .classname{
         font: normal normal normal 33px/65px NanumGothic;
+        font-size: 2.5em;
         letter-spacing: 2px;
         color: #ffffff;
         opacity: 1;

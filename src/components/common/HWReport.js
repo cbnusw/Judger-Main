@@ -26,10 +26,10 @@ const CardBody = styled.div`
     }
     .Cardborder{
         width: 500px;
-        height: 90px;
+        height: 100px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border-radius: 5px;
-        box-shadow: 0px 2px 10px #00000054;
+        box-shadow: 0px 2px 5px #00000054;
         border: 1px solid #ffffff;
         opacity: 1;
         display:flex;

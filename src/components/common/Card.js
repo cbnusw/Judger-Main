@@ -8,17 +8,21 @@ const CardBody = styled.div`
     .Cardheadertext{
         font-size:16px;
         margin-bottom: 5px;
+        color:gray;
         text-decoration:none;
     }
     .Cardborder{
-        width: 300px;
+        width: 350px;
         height: 250px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
-        box-shadow: 0px 2px 10px #00000054;
-        border: 1px solid #377CD6;
+        border-top: 3px solid gray;
+        border-bottom: 2px solid gray;
         opacity: 1;
         text-decoration:none;
 
+    }
+    .Cardborder:hover{
+        box-shadow: 0px 2px 10px #00000054;
     }
     .Cardheader{
         margin-top:50px;
@@ -34,7 +38,7 @@ const CardBody = styled.div`
     }
     .Cardtext{
         margin-bottom:5px;
-        color:black;
+        color:gray;
         text-decoration:none;
         font-size:16px;
     }

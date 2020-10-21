@@ -92,6 +92,9 @@ const DeadTime = styled.div`
 `;
 
 class Testcontent extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
   render() {
     return (
         <div>

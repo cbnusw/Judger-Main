@@ -94,8 +94,6 @@ const ExamTest = () => {
           </TestContentBox>
           <HeaderContainer/>
       </div>
-
-
   );    
 };
 

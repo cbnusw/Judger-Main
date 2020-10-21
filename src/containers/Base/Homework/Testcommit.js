@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 //import palette from '../../lib/styles/palette';
 
 
+
 const Header = styled.div`
     padding-top: 30px;
     padding-left: 80px;
@@ -64,6 +65,9 @@ const Comment = styled.div`
 `;
 
 class Testcontent extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
   render() {
     return (
         <div>

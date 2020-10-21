@@ -64,6 +64,9 @@ const Comment = styled.div`
 `;
 
 class Testcontent extends Component {
+    componentDidMount() { //화면 상단으로 이동시켜줌
+        window.scrollTo(0, 0);
+    }
   render() {
     return (
         <div>
