@@ -2,9 +2,6 @@ package com.qt.domain.question.dto;
 
 import com.qt.domain.contest.Contest;
 import com.qt.domain.question.Question;
-//import com.qt.domain.student.Student; //student라는 패키지 만들것
-import com.qt.domain.user.User; //혹은 user로 사용
-
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

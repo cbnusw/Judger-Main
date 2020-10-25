@@ -1,6 +1,7 @@
 package com.qt.question;
 
-import com.qt.domain.question.dto.QuestionInfo; //아래꺼로 경로지정하고 삭제할것
+
+import com.qt.domain.question.dto.QuestionInfo;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,12 +15,14 @@ public class QuestionController {
         this.questionService = questionService;
     }
 
+    //질문 등록
     @PostMapping("/contests/{id}/questions")
     public ResponseEntity createQuestion(@PathVariable("id")Long contestId, @ModelAttribute QuestionInfo questionInfo) {
         Long id = questionService.save(contestId, questionInfo);
         return ResponseEntity.created(URI.create("/questions/" + id)).build();
     }
 
+    //질문 조회
     @GetMapping("/questions/{id}")
     public ResponseEntity<QuestionInfo> showContestInfo(@PathVariable Long id) {
         QuestionInfo questionInfo = questionService.findById(id);
@@ -33,6 +36,7 @@ public class QuestionController {
 //        return ResponseEntity.noContent().build();
 //    }
 
+    //질문 삭제
     @DeleteMapping("/questions/{id}")
     public ResponseEntity<?> deleteQuestion(@PathVariable Long id) {
         questionService.deleteQuestion(id);

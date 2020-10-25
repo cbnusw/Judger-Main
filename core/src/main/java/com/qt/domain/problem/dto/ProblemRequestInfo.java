@@ -23,16 +23,4 @@ public class ProblemRequestInfo {
         this.timeLimit = timeLimit;
         this.memoryLimit = memoryLimit;
     }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public Double getTimeLimit() {
-        return this.timeLimit;
-    }
-
-    public Double getMemoryLimit() {
-        return this.memoryLimit;
-    }
 }

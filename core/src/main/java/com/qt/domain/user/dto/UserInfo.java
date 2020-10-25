@@ -44,7 +44,7 @@ public class UserInfo {
     @Override
     public String toString() {
         return  "universityCode='" + universityCode + '\'' +
-                ", studentId=" + userId + //StudentID에서 userid로 수정
+                //", studentId=" + studentId +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'';

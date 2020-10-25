@@ -38,6 +38,7 @@ public class ContestApplicationService {
         return contestApplicationRepository.save(new ContestApplication(contest, user)).getId();
     }
 
+    //단일조회 //질문 userinfo와 contestinfo의 id는 왜 조회되는지
     @Transactional(readOnly = true)
     public ContestApplicationInfo findByContestApplicationId(Long contestApplicationId) {
         ContestApplication contestApplication = contestApplicationRepository.findById(contestApplicationId).orElseThrow(NotFoundContestApplicationException::new);
@@ -48,6 +49,7 @@ public class ContestApplicationService {
                 .isApproved(contestApplication.getIsApproved()).build();
     }
 
+    //모두조회
     @Transactional(readOnly = true)
     public List<ContestApplicationInfo> findAllByContestId(Long contestId) {
         return contestApplicationRepository.findAllByContestId(contestId).stream()

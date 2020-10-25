@@ -1,6 +1,11 @@
 package com.qt.contest;
 
 import com.qt.AcceptanceTestUtils;
+import com.qt.domain.contest.Contest;
+import com.qt.domain.contest.dto.ContestInfo;
+import com.qt.domain.user.User;
+import jdk.nashorn.internal.ir.annotations.Ignore;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,10 +17,12 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.web.reactive.function.BodyInserters;
-
+import com.qt.user.UserRepository;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.is;
 
 
 @ExtendWith(SpringExtension.class)
@@ -27,13 +34,22 @@ public class ContestAcceptanceTest {
 
     private String contestId;
 
-    @BeforeEach
+//+
+    @Autowired
+    private ContestService contestService;
+
+//+
+
+
     @DisplayName("콘테스트 등록 테스트")
+    @Test
+    //@BeforeEach
     void createContest() {
+        System.out.println("콘테스트 등록 테스트");
         WebTestClient.ResponseSpec responseSpec = webTestClient.post()
                 .uri("/contests")
                 .contentType(MediaType.MULTIPART_FORM_DATA)
-                .body(BodyInserters.fromFormData("name", "contest1")
+                .body(BodyInserters.fromFormData("name", "테스트컨테스트")
                         .with("description", "easy contests")
                         .with("activeTime", String.valueOf(LocalDateTime.now()))
                         .with("inActiveTime", String.valueOf(LocalDateTime.now()))
@@ -47,11 +63,18 @@ public class ContestAcceptanceTest {
                 .expectHeader().valueMatches("location", "/contests/[1-9]+[0-9]*");
 
         contestId = AcceptanceTestUtils.extractDomainIdFromCreatedResourceAddress(responseSpec);
+
+
+
+        //System.out.println(contestId);
     }
 
+
     @Test
+    @Ignore
     @DisplayName("콘테스트 전체 조회 테스트")
     void showAllContest() {
+        System.out.println("콘테스트 전체 조회 테스트");
         webTestClient.get()
                 .uri("/contests")
                 .exchange()
@@ -62,8 +85,11 @@ public class ContestAcceptanceTest {
     }
 
     @Test
+    @Ignore
     @DisplayName("콘테스트 조회 테스트")
     void showContest() {
+        System.out.println("콘테스트 조회 테스트");
+        System.out.println("콘테스트 id: "+contestId);
         webTestClient.get()
                 .uri("/contests/" + contestId)
                 .exchange()
@@ -73,9 +99,12 @@ public class ContestAcceptanceTest {
                 .jsonPath("$.name").isEqualTo("contest1");
     }
 
+    //질문 select? 숫자?
     @Test
+    @Ignore
     @DisplayName("콘테스트 수정 테스트")
     void updateContest() {
+        System.out.println("콘테스트 수정 테스트");
         webTestClient.post()
                 .uri("/contests/" + contestId)
                 .contentType(MediaType.MULTIPART_FORM_DATA)
@@ -91,6 +120,7 @@ public class ContestAcceptanceTest {
                 .expectStatus()
                 .isNoContent();
 
+        System.out.println("콘테스트 수정후 조회 테스트");
         webTestClient.get()
                 .uri("/contests/" + contestId)
                 .exchange()
@@ -103,6 +133,7 @@ public class ContestAcceptanceTest {
     @Test
     @DisplayName("콘테스트 삭제 테스트")
     void deleteContest() {
+        System.out.println("콘테스트 삭제 테스트");
         webTestClient.delete()
                 .uri("/contests/" + contestId)
                 .exchange()
@@ -119,10 +150,13 @@ public class ContestAcceptanceTest {
     @Test
     @DisplayName("콘테스트에 문제 추가 테스트")
     void registerProblem() {
+        System.out.println("콘테스트 문제 추가 테스트");
         //POST problem1을 저장
+        System.out.println("콘테스트 problem1 저장 테스트");
         String problemId1 = createProblem("test1");
 
         //POST problem2을 저장
+        System.out.println("콘테스트 problem2 저장 테스트");
         String problemId2 = createProblem("test2");
 
         //POST contest에 problem 2개 추가

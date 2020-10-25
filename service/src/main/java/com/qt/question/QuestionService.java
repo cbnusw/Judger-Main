@@ -9,8 +9,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
-
 @Service
 @Transactional
 public class QuestionService {
@@ -19,7 +17,6 @@ public class QuestionService {
     private final QuestionRepository questionRepository;
     private final ModelMapper modelMapper;
 
-    //contestRepository 그리고 questionRepository 쪽에서 error
     public QuestionService(ContestRepository contestRepository, QuestionRepository questionRepository, ModelMapper modelMapper) {
         this.contestRepository = contestRepository;
         this.questionRepository = questionRepository;

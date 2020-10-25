@@ -4,7 +4,6 @@ import com.qt.AcceptanceTestUtils;
 import com.qt.contest.ContestRepository;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.dto.ContestInfo;
-import com.qt.user.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -28,18 +27,21 @@ class QuestionAcceptanceTest {
     @Autowired
     private ContestRepository contestRepository;
 
-    //StudentRepository=> UserRepository로 변경
-    @Autowired
-    private UserRepository userRepository;
+    //@Autowired
+    //private StudentRepository studentRepository;
 
     @Autowired
     private QuestionRepository questionRepository;
 
     private String questionId;
 
+    //@Test
     @BeforeEach
     @DisplayName("콘테스트 질문 등록 테스트")
     void createContest() throws Exception {
+        System.out.println("콘테스트 질문 등록 테스트----");
+
+        System.out.println("콘테스트 생성 ");
 
         ContestInfo contestInfo = ContestInfo.builder()
                 .name("contest 1")
@@ -54,6 +56,8 @@ class QuestionAcceptanceTest {
 
         Contest contest = contestRepository.save(contestInfo.toEntity());
 
+
+        System.out.println("콘테스트 질문 등록 ");
         WebTestClient.ResponseSpec responseSpec = webTestClient.post()
                 .uri("/contests/"+ contest.getId() +"/questions")
                 .contentType(MediaType.MULTIPART_FORM_DATA)
@@ -73,6 +77,7 @@ class QuestionAcceptanceTest {
     @Test
     @DisplayName("질문 조회 테스트")
     void showQuestion() {
+        System.out.println("콘테스트 질문 조회 테스트");
         webTestClient.get()
                 .uri("/questions/" + questionId)
                 .exchange()

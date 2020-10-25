@@ -45,5 +45,6 @@ public class ContestProblemRegistrationService {
         return contestProblemRegistrations.stream()
                 .map(registration -> modelMapper.map(registration.getProblem(), ProblemResponseInfo.class))
                 .collect(Collectors.toList());
+
     }
 }

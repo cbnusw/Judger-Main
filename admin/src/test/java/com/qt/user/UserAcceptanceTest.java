@@ -23,6 +23,8 @@ class UserAcceptanceTest {
     @Test
     @DisplayName("모든 학생 조회")
     void findAllUsers() {
+        System.out.println("모든 학생 조회 테스트-------------------");
+        //유저생성1
         UserInfo userInfo1 = UserInfo.builder()
                 .userId("2014")
                 .name("s1")
@@ -30,7 +32,7 @@ class UserAcceptanceTest {
                 .phoneNumber("1234")
                 .universityCode("cbnu")
                 .build();
-
+        //유저생성1
         UserInfo userInfo2 = UserInfo.builder()
                 .userId("2015")
                 .name("s2")
@@ -42,6 +44,7 @@ class UserAcceptanceTest {
         userRepository.save(userInfo1.toEntity());
         userRepository.save(userInfo2.toEntity());
 
+        //모든 유저 조회
         webTestClient.get()
                 .uri("/users")
                 .exchange()
