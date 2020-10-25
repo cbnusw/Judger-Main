@@ -33,7 +33,7 @@ public class SubmitController {
 
     }
 
-    //코드 제출(컨테스트 문제)
+    //코드 제출(컨테스트 문제)")
     @PostMapping("/submit/contests/{cid}/problems/{pid}/users/{uid}")
     public ResponseEntity submitContest(@PathVariable("cid")Long contestId, @PathVariable("pid")Long problemId,@PathVariable("uid") Long userId, SubmitRequest submitRequest){
         contestSubmitService.Save(contestId,problemId,userId,submitRequest);
