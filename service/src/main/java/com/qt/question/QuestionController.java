@@ -1,7 +1,6 @@
 package com.qt.question;
 
-
-import com.qt.domain.question.dto.QuestionInfo;
+import com.qt.domain.question.dto.QuestionInfo; //아래꺼로 경로지정하고 삭제할것
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

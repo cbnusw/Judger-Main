@@ -60,6 +60,8 @@ public class ContestInfo {
         return new Contest(name, description, activeTime, inActiveTime, startTime, endTime, freezeTime, unFreezeTime);
     }
 
+
+    //수정 필요???
     @Override
     public String toString() {
         return "name='" + name + '\'' +
