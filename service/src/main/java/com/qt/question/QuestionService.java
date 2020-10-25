@@ -1,15 +1,15 @@
 package com.qt.question;
 
+import com.qt.contest.ContestRepository;
+import com.qt.contest.NotFoundContestException;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.question.Question;
 import com.qt.domain.question.dto.QuestionInfo;
-import com.qt.domain.student.Student;
-import com.qt.ext.ContestRepository;
-import com.qt.ext.NotFoundContestException;
-import com.qt.ext.StudentRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+
 
 @Service
 @Transactional
@@ -19,6 +19,7 @@ public class QuestionService {
     private final QuestionRepository questionRepository;
     private final ModelMapper modelMapper;
 
+    //contestRepository 그리고 questionRepository 쪽에서 error
     public QuestionService(ContestRepository contestRepository, QuestionRepository questionRepository, ModelMapper modelMapper) {
         this.contestRepository = contestRepository;
         this.questionRepository = questionRepository;

@@ -1,0 +1,11 @@
+dependencies{
+
+    compile project (':core')
+
+    //REST-API 문서화
+    compile group:'io.springfox', name:'springfox-swagger2',version:'2.4.0'
+    compile group:'io.springfox',name:'springfox-swagger-ui',version:'2.4.0'
+}
+
+bootJar { enabled = false }
+jar { enabled = true }

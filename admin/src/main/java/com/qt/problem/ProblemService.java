@@ -20,7 +20,9 @@ import java.util.stream.Collectors;
 @Service
 @Transactional
 public class ProblemService {
-    private static final String LOCAL_PROBLEM_STORAGE_PATH = "/Users/hyogeon/IdeaProjects/judger-main-server/admin/src/main/resources/static/problems/";
+    private static final String LOCAL_PROBLEM_STORAGE_PATH = "D:/osscenter/mainserver/admin/src/main/resources/static"; //PATH (Desktop 기준)
+
+    // 기존 PATH "/Users/hyogeon/IdeaProjects/judger-main-server/admin/src/main/resources/static/problems/"
 
     private static final String FILE_PATH = "file:";
 

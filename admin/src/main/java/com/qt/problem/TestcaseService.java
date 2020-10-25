@@ -10,7 +10,8 @@ import java.util.List;
 @Service
 public class TestcaseService {
 
-    private static final String LOCAL_PROBLEM_STORAGE_PATH = "/Users/hyogeon/IdeaProjects/judger-main-server/admin/src/main/resources/static/problems/";
+    private static final String LOCAL_PROBLEM_STORAGE_PATH ="D:/osscenter/mainserver/admin/src/main/resources/static"; //PATH (Desktop 기준)
+            //기존 PATH "/Users/hyogeon/IdeaProjects/judger-main-server/admin/src/main/resources/static/problems/";
     private static final String TEST_CASE_PATH = "/tc";
     private static final String TEST_CASE_INPUT_PATH = "/in";
     private static final String TEST_CASE_OUTPUT_PATH = "/out";

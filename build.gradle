@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.1.RELEASE'
+        springBootVersion = '2.1.6.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -16,9 +16,9 @@ subprojects {
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'eclipse'
 
-    group = 'com.hg'
+    group = 'com.qt' //hg?? qt??
     version = '1.0'
-    sourceCompatibility = 1.8
+    sourceCompatibility = 1.8 //1.8 이 아닌 14.2
 
     repositories {
         mavenCentral()
@@ -38,6 +38,10 @@ subprojects {
         }
         testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.1")
         testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.1")
+
+        //REST-API 문서화
+        compile group:'io.springfox', name:'springfox-swagger2',version:'2.4.0'
+        compile group:'io.springfox',name:'springfox-swagger-ui',version:'2.4.0'
     }
 
     test {
@@ -48,5 +52,20 @@ subprojects {
 project(':admin') {
     dependencies {
         compile project(':core')
+    }
+}
+project(':professor') {
+    dependencies {
+        compile project(':admin')
+        compile project(':core')
+    }
+}
+
+
+project(':service'){
+    dependencies{
+        compile project(':core')
+        compile project(":admin")
+        //compile group:'org.apache.httpcomponents', name:'httpclient',version:'4.5.2'
     }
 }
