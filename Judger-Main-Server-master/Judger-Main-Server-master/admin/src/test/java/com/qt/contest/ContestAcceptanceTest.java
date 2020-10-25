@@ -68,25 +68,6 @@ public class ContestAcceptanceTest {
 
         //System.out.println(contestId);
     }
-/*
-    @Test
-    @Ignore
-    @DisplayName("추가 테스트")
-    public void test(){
-        System.out.println("추가 테스트");
-        ContestInfo contestInfo= ContestInfo.builder().name("나의 컨테스트")
-                .description("나의 컨테스트의 내용")
-                .activeTime(LocalDateTime.now())
-                .inActiveTime(LocalDateTime.now())
-                .startTime(LocalDateTime.now())
-                .endTime(LocalDateTime.now())
-                .freezeTime(LocalDateTime.now())
-                .unFreezeTime(LocalDateTime.now()).build();
-        contestService.save(contestInfo);
-        System.out.println(contestService.findAll().size());
-    }
-
- */
 
 
     @Test
