@@ -1,6 +1,7 @@
 package com.qt.question;
 
 import com.qt.AcceptanceTestUtils;
+import com.qt.repository.QuestionRepository;
 import com.qt.contest.ContestRepository;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.dto.ContestInfo;
@@ -62,9 +63,10 @@ class QuestionAcceptanceTest {
                 .uri("/contests/"+ contest.getId() +"/questions")
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromFormData("content", "test")
-                        //.with("createTime", String.valueOf(LocalDateTime.now()))
+                        .with("createTime", String.valueOf(LocalDateTime.now()))
                         .with("problemNumber", String.valueOf(1))
-                        .with("response", " "))
+                        .with("reply","response")
+                        )
                 .exchange()
                 .expectStatus()
                 .isCreated()
@@ -85,5 +87,18 @@ class QuestionAcceptanceTest {
                 .isOk()
                 .expectBody()
                 .jsonPath("$.content").isEqualTo("test");
+    }
+
+    @Test
+    @DisplayName("질문 전체 조회 테스트")
+    void showAllQuestion(){
+        System.out.println("콘테스트 질문 전체 조회 테스트");
+        webTestClient.get()
+                .uri("/questions")
+                .exchange()
+                .expectStatus()
+                .isOk()
+                .expectBody();
+
     }
 }

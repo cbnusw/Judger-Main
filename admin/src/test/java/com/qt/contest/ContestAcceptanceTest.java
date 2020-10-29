@@ -49,7 +49,7 @@ public class ContestAcceptanceTest {
         WebTestClient.ResponseSpec responseSpec = webTestClient.post()
                 .uri("/contests")
                 .contentType(MediaType.MULTIPART_FORM_DATA)
-                .body(BodyInserters.fromFormData("name", "테스트컨테스트")
+                .body(BodyInserters.fromFormData("name", "홍길동")
                         .with("description", "easy contests")
                         .with("activeTime", String.valueOf(LocalDateTime.now()))
                         .with("inActiveTime", String.valueOf(LocalDateTime.now()))
