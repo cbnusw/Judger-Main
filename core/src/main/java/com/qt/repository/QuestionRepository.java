@@ -1,4 +1,4 @@
-package com.qt.question;
+package com.qt;
 
 import com.qt.domain.question.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
