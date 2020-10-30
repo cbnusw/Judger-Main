@@ -33,11 +33,12 @@ public class QuestionInfo {
     private String reply;
 
 
-    @CreatedDate
-    private String createTime;
+    @NotNull
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
+    private LocalDateTime createTime;
 
     @Builder
-    public QuestionInfo(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, String createTime, String reply) {
+    public QuestionInfo(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, LocalDateTime createTime, String reply) {
         this.contest = contest;
         this.problemNumber = problemNumber;
         this.content = content;

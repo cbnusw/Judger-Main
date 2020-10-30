@@ -36,8 +36,8 @@ class QuestionAcceptanceTest {
 
     private String questionId;
 
-    //@Test
-    @BeforeEach
+    @Test
+    //@BeforeEach
     @DisplayName("콘테스트 질문 등록 테스트")
     void createContest() throws Exception {
         System.out.println("콘테스트 질문 등록 테스트----");
@@ -47,12 +47,8 @@ class QuestionAcceptanceTest {
         ContestInfo contestInfo = ContestInfo.builder()
                 .name("contest 1")
                 .description("easy contest")
-                .activeTime(LocalDateTime.now())
-                .inActiveTime(LocalDateTime.now())
                 .startTime(LocalDateTime.now())
                 .endTime(LocalDateTime.now())
-                .freezeTime(LocalDateTime.now())
-                .unFreezeTime(LocalDateTime.now())
                 .build();
 
         Contest contest = contestRepository.save(contestInfo.toEntity());

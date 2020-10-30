@@ -37,10 +37,10 @@ public class Question {
     @Lob
     private String reply;
 
-    @CreatedDate
-    private String createTime;
+    @NotNull
+    private LocalDateTime createTime;
 
-    public Question(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, String createTime,String reply) {
+    public Question(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, LocalDateTime createTime,String reply) {
         this.contest = contest;
         this.problemNumber = problemNumber;
         this.content = content;

@@ -51,17 +51,14 @@ public class ContestAcceptanceTest {
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromFormData("name", "홍길동")
                         .with("description", "easy contests")
-                        .with("activeTime", String.valueOf(LocalDateTime.now()))
-                        .with("inActiveTime", String.valueOf(LocalDateTime.now()))
                         .with("startTime", String.valueOf(LocalDateTime.now()))
-                        .with("endTime", String.valueOf(LocalDateTime.now()))
-                        .with("freezeTime", String.valueOf(LocalDateTime.now()))
-                        .with("unFreezeTime", String.valueOf(LocalDateTime.now())))
+                        .with("endTime", String.valueOf(LocalDateTime.now())))
                 .exchange()
                 .expectStatus()
                 .isCreated()
                 .expectHeader().valueMatches("location", "/contests/[1-9]+[0-9]*");
 
+        System.out.println(String.valueOf(LocalDateTime.now()));
         contestId = AcceptanceTestUtils.extractDomainIdFromCreatedResourceAddress(responseSpec);
 
 
@@ -110,12 +107,8 @@ public class ContestAcceptanceTest {
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromFormData("name", "update contest")
                         .with("description", "easy contests")
-                        .with("activeTime", String.valueOf(LocalDateTime.now()))
-                        .with("inActiveTime", String.valueOf(LocalDateTime.now()))
                         .with("startTime", String.valueOf(LocalDateTime.now()))
-                        .with("endTime", String.valueOf(LocalDateTime.now()))
-                        .with("freezeTime", String.valueOf(LocalDateTime.now()))
-                        .with("unFreezeTime", String.valueOf(LocalDateTime.now())))
+                        .with("endTime", String.valueOf(LocalDateTime.now())))
                 .exchange()
                 .expectStatus()
                 .isNoContent();
