@@ -62,3 +62,9 @@ Classroom-homework-registration-Controller
 * 강의실 과제 조회(진행중)
 * 강의실 과제 삭제(진행중)
 
+(과제는 txt와 code로 분리할것)
+
++a
+* 강의실 질의응답 클래스
+* 강의실 시험 클래스
+* 강의실 학생 성적 클래스
