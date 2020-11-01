@@ -4,6 +4,7 @@ OSS센터 Online Judge Main Server
 온라인저지 API 기능들 정리
 
 <<관리자>>
+
 ContestController
 * 컨테스트 등록
 * 등록된 모든 컨테스트 조회
@@ -33,6 +34,7 @@ UserController
 * 가입된 모든 유저들의 정보 조회
 
 <<학생>>
+
 QuestionController
 * 질문 등록
 * 질문 조회
@@ -47,6 +49,7 @@ SubmitController
 
 
 <<교수>>
+
 ClassController
 * 강의실 생성
 * 강의실 조회
