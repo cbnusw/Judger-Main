@@ -1,5 +1,6 @@
 package com.qt.classroom.apply;
 
+import com.qt.domain.classroom.ClassroomApplication;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,20 +43,26 @@ public class ClassroomApplicationController {
     //classroom별 등록된 user 보는법 고치는중
     @GetMapping("/{classroomId}/apply")
     public ResponseEntity<List> showClassroomApplications(@PathVariable Long classroomId) {
-        List<ClassroomApplicationInfo> classroomApplicationInfos = classroomApplicationService.findAllByClassroomId(classroomId);
+        //List<ClassroomApplicationInfo> classroomApplicationInfos = classroomApplicationService.findAllByClassroomId(classroomId);
+        //List<ClassroomApplicationInfo> classroomApplicationIznfos = classroomApplicationService.findAllByClassroomId2(classroomId);
+        List<ClassroomApplication> classroomApplicationInfos=classroomApplicationService.findAllByClassroomId2(classroomId);
 
         return ResponseEntity.ok(classroomApplicationInfos);
 
     }
 
-
-
-    //error
-//    @GetMapping("/{classroomId}/apply")
-//    public ResponseEntity<List<ClassroomApplicationInfo>> showClassroomApplications(@PathVariable Long classroomId) {
-//        List<ClassroomApplicationInfo> classroomApplicationInfos = classroomApplicationService.findAllByClassroomId(classroomId);
+    //find by classroomId and IsApproved
+//    @GetMapping("/{classroomId}/applyIsApproved")
+//    public ResponseEntity<List> showClassroomApplicationsIsApproved(@PathVariable Long classroomId) {
+//        //List<ClassroomApplicationInfo> classroomApplicationInfos = classroomApplicationService.findAllByClassroomId(classroomId);
+//        //List<ClassroomApplicationInfo> classroomApplicationIznfos = classroomApplicationService.findAllByClassroomId2(classroomId);
+//        List<ClassroomApplication> classroomApplicationInfos=classroomApplicationService.findAllByClassroomId3(classroomId,true);
+//
 //        return ResponseEntity.ok(classroomApplicationInfos);
+//
 //    }
+
+
 
 //    @PostMapping("/{classroomId}/apply/{classroomApplicationId}")
 //    public ResponseEntity approveClassroom(@PathVariable Long classroomApplicationId)
