@@ -31,8 +31,8 @@ public class ContestProblemRegistrationAcceptanceTest {
 
 
     @DisplayName("콘테스트에 문제 추가 테스트")
-    @BeforeEach
-    //@Test
+    //@BeforeEach
+    @Test
     void createContest() {
         System.out.println("콘테스트 문제 추가--------------------");
 
@@ -42,12 +42,8 @@ public class ContestProblemRegistrationAcceptanceTest {
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromFormData("name", "contest1")
                         .with("description", "easy contests")
-                        .with("activeTime", String.valueOf(LocalDateTime.now()))
-                        .with("inActiveTime", String.valueOf(LocalDateTime.now()))
                         .with("startTime", String.valueOf(LocalDateTime.now()))
-                        .with("endTime", String.valueOf(LocalDateTime.now()))
-                        .with("freezeTime", String.valueOf(LocalDateTime.now()))
-                        .with("unFreezeTime", String.valueOf(LocalDateTime.now())))
+                        .with("endTime", String.valueOf(LocalDateTime.now())))
                 .exchange()
                 .expectStatus()
                 .isCreated()

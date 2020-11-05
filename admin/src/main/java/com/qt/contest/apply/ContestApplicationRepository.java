@@ -11,5 +11,6 @@ public interface ContestApplicationRepository extends JpaRepository<ContestAppli
 
    // @EntityGraph(attributePaths = {"user","contest"},type = EntityGraph.EntityGraphType.FETCH)
     List<ContestApplication> findAllByContestId(Long contestId);
+    ContestApplication findByContestIdAndUserId(Long contestId,Long userId);
 
 }

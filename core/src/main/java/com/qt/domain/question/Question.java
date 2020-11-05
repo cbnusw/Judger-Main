@@ -35,16 +35,20 @@ public class Question {
     private String content;
 
     @Lob
-    private String response;
+    private String reply;
 
-    @CreatedDate
+    @NotNull
     private LocalDateTime createTime;
 
-    public Question(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, String response, LocalDateTime createTime) {
+    public Question(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, LocalDateTime createTime,String reply) {
         this.contest = contest;
         this.problemNumber = problemNumber;
         this.content = content;
-        this.response = response;
         this.createTime = createTime;
+        this.reply=reply;
+    }
+
+    public void updateTo(String reply){
+        this.reply=reply;
     }
 }

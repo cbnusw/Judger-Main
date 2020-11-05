@@ -30,8 +30,8 @@ public class ProblemAcceptanceTest {
 
     private String problemId;
 
-    //@Test
-    @BeforeEach
+    @Test
+    //@BeforeEach
     @DisplayName("pdf 파일, 문제 저장 테스트")
     void createProblem() {
         System.out.println("문제 저장테스트-------------------");

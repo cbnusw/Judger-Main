@@ -30,22 +30,24 @@ public class QuestionInfo {
     private String content;
 
     @Lob
-    private String response;
+    private String reply;
 
-    @CreatedDate
+
+    @NotNull
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime createTime;
 
     @Builder
-    public QuestionInfo(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, String response, LocalDateTime createTime) {
+    public QuestionInfo(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, LocalDateTime createTime, String reply) {
         this.contest = contest;
         this.problemNumber = problemNumber;
         this.content = content;
-        this.response = response;
         this.createTime = createTime;
+        this.reply=reply;
     }
 
     public Question toEntity() {
-        return new Question(contest, problemNumber, content, response, createTime);
+        return new Question(contest, problemNumber, content, createTime,reply);
     }
 
     @Override
@@ -53,8 +55,8 @@ public class QuestionInfo {
         return "QuestionInfo{" +
                 "contest=" + contest +
                 ", problemNumber=" + problemNumber +
+                ", reply=" +reply +
                 ", content='" + content + '\'' +
-                ", response='" + response + '\'' +
                 ", createTime=" + createTime +
                 '}';
     }

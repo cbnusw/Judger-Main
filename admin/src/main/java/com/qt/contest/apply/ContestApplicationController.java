@@ -16,7 +16,7 @@ public class ContestApplicationController {
         this.contestApplicationService = contestApplicationService;
     }
 
-    //신청된 컨테스트의 정보들 저장
+    //컨테스트 신청
     @PostMapping("/{contestId}/apply/{userId}")
     public ResponseEntity applyContest(@PathVariable Long contestId, @PathVariable Long userId) {
         Long contestApplicationId = contestApplicationService.apply(contestId, userId);

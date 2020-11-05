@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 public class QuestionController {
@@ -24,9 +25,17 @@ public class QuestionController {
 
     //질문 조회
     @GetMapping("/questions/{id}")
-    public ResponseEntity<QuestionInfo> showContestInfo(@PathVariable Long id) {
+    public ResponseEntity<QuestionInfo> showQuestionInfo(@PathVariable Long id) {
         QuestionInfo questionInfo = questionService.findById(id);
         return ResponseEntity.ok(questionInfo);
+    }
+
+    //질문 모두 조회
+    @GetMapping("/questions")
+    public ResponseEntity<List<QuestionInfo>> showQuestion(){
+        List<QuestionInfo> questionInfos=questionService.findAll();
+        return ResponseEntity.ok(questionInfos);
+
     }
 
 // TODO : 역시 컨트롤러 Update 부분도 의논 사항

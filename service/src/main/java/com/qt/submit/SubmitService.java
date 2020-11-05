@@ -20,11 +20,11 @@ import java.net.URL;
 @Service
 public class SubmitService {
     //메인서버의 코드, 테스트케이스를 json형식으로 채점서버로 post방식으로 전송
-    protected static final String LOCAL_PROBLEM_STORAGE_PATH = "C:\\Users\\jtm06\\javaProject\\git_home\\Judger-Main-Server-master\\Judger-Main-Server-master\\admin\\src\\main\\resources\\problems";
+    protected static final String LOCAL_PROBLEM_STORAGE_PATH = "C:\\Users\\jtm06\\javaProject\\git_home\\Judger-Main-Server-master\\admin\\src\\main\\resources\\problems";
     protected static final String TEST_CASE_PATH = "/tc";
     protected static final String TEST_CASE_INPUT_PATH = "/in";
     protected static final String TEST_CASE_OUTPUT_PATH = "/out";
-    protected static final String SCORING_SERVER_URL = "http://192.168.0.37:3012/api/judge";
+    protected static final String SCORING_SERVER_URL = "http://172.30.1.6:3012/api/judge";
     //테스트케이스파일 개수
 
     int testCase_Num = 1;
@@ -46,12 +46,14 @@ public class SubmitService {
 
     public void Save(Long problemId, Long userId, SubmitRequest submitRequest) {
         String response=ReadTestCase(problemId,submitRequest);
-
+        System.out.println("test");
         //테이블에 저장
         SubmitResponse submitResponse =new SubmitResponse();
         Problem problem=problemRepository.findById(problemId).orElseThrow(NotFoundProblemException::new);
         User user=userRepository.findById(userId).orElseThrow(NotFoundUserException::new);
         submitResponse.setLanguage(submitRequest.getLanguage());
+        System.out.println(submitRequest.getLanguage());
+        System.out.println(submitRequest.getSource());
         submitResponse.setProblem(problem);
         submitResponse.setUser(user);
         submitResponse.setResult(response);
