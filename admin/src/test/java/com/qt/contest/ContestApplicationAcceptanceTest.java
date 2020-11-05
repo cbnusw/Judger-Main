@@ -40,8 +40,8 @@ public class ContestApplicationAcceptanceTest {
 
     private static int id = -1;
 
-    //@Test
-    @BeforeEach
+    @Test
+    //@BeforeEach
     @DisplayName("콘테스트 신청 테스트")
     void setUp() {
         System.out.println("콘테스트 신청-------------------");
@@ -57,12 +57,8 @@ public class ContestApplicationAcceptanceTest {
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromFormData("name", "contest1")
                         .with("description", "easy contests")
-                        .with("activeTime", String.valueOf(LocalDateTime.now()))
-                        .with("inActiveTime", String.valueOf(LocalDateTime.now()))
                         .with("startTime", String.valueOf(LocalDateTime.now()))
-                        .with("endTime", String.valueOf(LocalDateTime.now()))
-                        .with("freezeTime", String.valueOf(LocalDateTime.now()))
-                        .with("unFreezeTime", String.valueOf(LocalDateTime.now())))
+                        .with("endTime", String.valueOf(LocalDateTime.now())))
                 .exchange()
                 .expectStatus()
                 .isCreated()

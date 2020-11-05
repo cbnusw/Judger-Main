@@ -37,7 +37,7 @@ public class ContestStartAcceptanceTest {
 
         System.out.println("콘테스트 시작 테스트");
         responseSpec=webTestClient.post()
-                .uri("/start/contest/"+contestId)
+                .uri("/start/contest/15/user/14")
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromFormData("time", String.valueOf(LocalDateTime.now())))
                 .exchange()

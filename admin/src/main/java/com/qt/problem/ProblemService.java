@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @Service
 @Transactional
 public class ProblemService {
-    private static final String LOCAL_PROBLEM_STORAGE_PATH = "C:\\Users\\jtm06\\javaProject\\git_home\\Judger-Main-Server-master\\Judger-Main-Server-master\\admin\\src\\main\\resources\\problems";
+    private static final String LOCAL_PROBLEM_STORAGE_PATH = "C:\\Users\\jtm06\\javaProject\\git_home\\Judger-Main-Server-master\\admin\\src\\main\\resources\\problems";
 
     private static final String FILE_PATH = "file:";
 

@@ -16,7 +16,7 @@ import java.util.List;
 @Service
 public class TestcaseService {
 
-    private static final String LOCAL_PROBLEM_STORAGE_PATH = "C:\\Users\\jtm06\\javaProject\\git_home\\Judger-Main-Server-master\\Judger-Main-Server-master\\admin\\src\\main\\resources\\problems";
+    private static final String LOCAL_PROBLEM_STORAGE_PATH = "C:\\Users\\jtm06\\javaProject\\git_home\\Judger-Main-Server-master\\admin\\src\\main\\resources\\problems";
     private static final String TEST_CASE_PATH = "/tc";
     private static final String TEST_CASE_INPUT_PATH = "/in";
     private static final String TEST_CASE_OUTPUT_PATH = "/out";

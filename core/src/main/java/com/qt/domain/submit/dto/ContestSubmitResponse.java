@@ -10,6 +10,7 @@ import lombok.Setter;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
@@ -21,6 +22,9 @@ public class ContestSubmitResponse {
 
         @NotNull
         private String language;
+
+        @Lob
+        private String source;
 
         //컨테스트정보
         @ManyToOne
@@ -45,6 +49,6 @@ public class ContestSubmitResponse {
         private int submitCount;
 
         public ContestSubmit toEntity(){
-            return new ContestSubmit(language,contest,problem,user,result,submitCount);
+            return new ContestSubmit(language,contest,problem,user,result,submitCount,source);
         }
 }

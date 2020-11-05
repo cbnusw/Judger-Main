@@ -29,4 +29,7 @@ public class ContestProblemRegistrationController {
         List<ProblemResponseInfo> problemResponseInfos = contestProblemRegistrationService.showRegisteredProblems(contestId);
         return ResponseEntity.ok(problemResponseInfos);
     }
+
+
+
 }

@@ -8,10 +8,7 @@ import com.qt.domain.user.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -23,8 +20,8 @@ public class ContestSubmit {
     @GeneratedValue
     private Long id;
 
-    //@NotNull
-    //private String source;
+    @Lob
+    private String source;
 
     //제출횟수
     @NotNull
@@ -53,13 +50,14 @@ public class ContestSubmit {
     private String result;
 
 
-    public ContestSubmit(@NotNull String language, @NotNull Contest contest, @NotNull Problem problem, @NotNull User user, @NotNull String result,@NotNull int submitCount) {
+    public ContestSubmit(@NotNull String language, @NotNull Contest contest, @NotNull Problem problem, @NotNull User user, @NotNull String result,@NotNull int submitCount, @NotNull String source) {
         this.language = language;
         this.contest = contest;
         this.problem = problem;
         this.user = user;
         this.result = result;
         this.submitCount=submitCount;
+        this.source=source;
     }
 
     public Long UpdateTo(SubmitRequest submitRequest){
