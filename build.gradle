@@ -53,6 +53,8 @@ subprojects {
     test {
         useJUnitPlatform()
     }
+    bootJar { enabled = true }
+    jar { enabled = true }
 }
 
 project(':admin') {
