@@ -5,9 +5,7 @@ import com.qt.domain.submit.Submit;
 import com.qt.domain.submit.dto.SubmitResponse;
 import com.qt.domain.submit.dto.SubmitRequest;
 import com.qt.domain.user.User;
-import com.qt.problem.NotFoundProblemException;
 import com.qt.repository.ProblemRepository;
-import com.qt.user.NotFoundUserException;
 import com.qt.repository.UserRepository;
 import org.json.simple.JSONObject;
 import org.modelmapper.ModelMapper;
@@ -49,8 +47,8 @@ public class SubmitService {
         System.out.println("test");
         //테이블에 저장
         SubmitResponse submitResponse =new SubmitResponse();
-        Problem problem=problemRepository.findById(problemId).orElseThrow(NotFoundProblemException::new);
-        User user=userRepository.findById(userId).orElseThrow(NotFoundUserException::new);
+        Problem problem=problemRepository.findById(problemId).orElseThrow(RuntimeException::new);
+        User user=userRepository.findById(userId).orElseThrow(RuntimeException::new);
         submitResponse.setLanguage(submitRequest.getLanguage());
         System.out.println(submitRequest.getLanguage());
         System.out.println(submitRequest.getSource());

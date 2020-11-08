@@ -1,7 +1,6 @@
 package com.qt.start;
 
 import com.qt.repository.ContestRepository;
-import com.qt.contest.NotFoundContestException;
 import com.qt.repository.ContestApplicationRepository;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.ContestApplication;
@@ -24,7 +23,7 @@ public class ContestStartService {
         this.contestApplicationRepository = contestApplicationRepository;
     }
     public ContestStartInfo isContestTimeCheck(Long contestId, LocalDateTime curTime){
-        Contest contest=contestRepository.findById(contestId).orElseThrow(NotFoundContestException::new);
+        Contest contest=contestRepository.findById(contestId).orElseThrow(RuntimeException::new);
         LocalDateTime startTime=contest.getStartTime(); LocalDateTime endTime=contest.getEndTime();
         long Remainingtime=0;
         boolean isContestPossilbe=(curTime.isAfter(startTime))&&(curTime.isBefore(endTime));

@@ -55,12 +55,12 @@ public class ProblemService {
         return problemRepository
                 .findById(id)
                 .map(problem -> modelMapper.map(problem, ProblemResponseInfo.class))
-                .orElseThrow(NotFoundProblemException::new);
+                .orElseThrow(RuntimeException::new);
     }
 
     @Transactional(readOnly = true)
     public FileInfo findProblemFile(Long id) throws IOException {
-        Problem problem = problemRepository.findById(id).orElseThrow(NotFoundProblemException::new);
+        Problem problem = problemRepository.findById(id).orElseThrow(RuntimeException::new);
         //String identifier = problem.getIdentifier();
         Resource resource = resourceLoader.getResource(FILE_PATH + LOCAL_PROBLEM_STORAGE_PATH + problem.getId() + "/" + problem.getName());
 
@@ -95,7 +95,7 @@ public class ProblemService {
     }
 
     private Problem deleteProblemFile(Long id) throws IOException {
-        Problem problem = problemRepository.findById(id).orElseThrow(NotFoundProblemException::new);
+        Problem problem = problemRepository.findById(id).orElseThrow(RuntimeException::new);
         Resource resource = resourceLoader.getResource(FILE_PATH + LOCAL_PROBLEM_STORAGE_PATH + problem.getId());
         resource.getFile().delete();
         return problem;

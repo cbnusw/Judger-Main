@@ -2,11 +2,9 @@ package com.qt.contest.regist;
 
 import com.qt.repository.ContestProblemRegistrationRepository;
 import com.qt.repository.ContestRepository;
-import com.qt.contest.NotFoundContestException;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.ContestProblemRegistration;
 import com.qt.domain.problem.dto.ProblemResponseInfo;
-import com.qt.problem.NotFoundProblemException;
 import com.qt.repository.ProblemRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -31,10 +29,10 @@ public class ContestProblemRegistrationService {
     }
 
     public void register(Long contestId, List<Long> problemIds) {
-        Contest contest = contestRepository.findById(contestId).orElseThrow(NotFoundContestException::new);
+        Contest contest = contestRepository.findById(contestId).orElseThrow(RuntimeException::new);
 
         problemIds.stream()
-                .map(id -> problemRepository.findById(id).orElseThrow(NotFoundProblemException::new))
+                .map(id -> problemRepository.findById(id).orElseThrow(RuntimeException::new))
                 .forEach(problem -> contestProblemRegistrationRepository.save(new ContestProblemRegistration(contest, problem)));
     }
 

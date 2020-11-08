@@ -36,12 +36,12 @@ public class ContestService {
 
     @Transactional(readOnly = true)
     public ContestInfo findById(Long id) {
-        Contest contest = contestRepository.findById(id).orElseThrow(NotFoundContestException::new);
+        Contest contest = contestRepository.findById(id).orElseThrow(RuntimeException::new);
         return modelMapper.map(contest, ContestInfo.class);
     }
 
     public Long updateContest(Long id, ContestInfo contestInfo) {
-        Contest contest = contestRepository.findById(id).orElseThrow(NotFoundContestException::new);
+        Contest contest = contestRepository.findById(id).orElseThrow(RuntimeException::new);
         return contest.updateTo(contestInfo);
     }
 

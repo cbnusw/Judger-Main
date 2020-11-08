@@ -54,7 +54,7 @@ public class ContestController {
     }
 
     @ExceptionHandler
-    public ResponseEntity eventErrorHandler(NotFoundContestException exception) {
+    public ResponseEntity eventErrorHandler(RuntimeException exception) {
         return ResponseEntity.notFound().build();
     }
 }

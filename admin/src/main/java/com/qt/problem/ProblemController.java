@@ -93,7 +93,7 @@ public class ProblemController {
     }
 
     @ExceptionHandler
-    public ResponseEntity eventErrorHandler(NotFoundProblemException exception) {
+    public ResponseEntity eventErrorHandler(RuntimeException exception) {
         return ResponseEntity.notFound().build();
     }
 }

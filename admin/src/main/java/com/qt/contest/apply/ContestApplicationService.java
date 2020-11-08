@@ -2,13 +2,11 @@ package com.qt.contest.apply;
 
 import com.qt.repository.ContestApplicationRepository;
 import com.qt.repository.ContestRepository;
-import com.qt.contest.NotFoundContestException;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.ContestApplication;
 import com.qt.domain.contest.dto.ContestInfo;
 import com.qt.domain.user.User;
 import com.qt.domain.user.dto.UserInfo;
-import com.qt.user.NotFoundUserException;
 import com.qt.repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -34,15 +32,15 @@ public class ContestApplicationService {
     }
 
     public Long apply(Long contestId, Long userId) {
-        Contest contest = contestRepository.findById(contestId).orElseThrow(NotFoundContestException::new);
-        User user = userRepository.findById(userId).orElseThrow(NotFoundUserException::new);
+        Contest contest = contestRepository.findById(contestId).orElseThrow(RuntimeException::new);
+        User user = userRepository.findById(userId).orElseThrow(RuntimeException::new);
         return contestApplicationRepository.save(new ContestApplication(contest, user)).getId();
     }
 
     //단일조회 //질문 userinfo와 contestinfo의 id는 왜 조회되는지
     @Transactional(readOnly = true)
     public ContestApplicationInfo findByContestApplicationId(Long contestApplicationId) {
-        ContestApplication contestApplication = contestApplicationRepository.findById(contestApplicationId).orElseThrow(NotFoundContestApplicationException::new);
+        ContestApplication contestApplication = contestApplicationRepository.findById(contestApplicationId).orElseThrow(RuntimeException::new);
         return ContestApplicationInfo.builder()
                 .id(contestApplication.getId())
                 .contestInfo(modelMapper.map(contestApplication.getContest(), ContestInfo.class))
@@ -63,7 +61,7 @@ public class ContestApplicationService {
     }
 
     public void changeApproveStatus(Long contestApplicationId) {
-        ContestApplication contestApplication = contestApplicationRepository.findById(contestApplicationId).orElseThrow(NotFoundContestApplicationException::new);
+        ContestApplication contestApplication = contestApplicationRepository.findById(contestApplicationId).orElseThrow(RuntimeException::new);
         contestApplication.changeApproveStatus();
     }
 }

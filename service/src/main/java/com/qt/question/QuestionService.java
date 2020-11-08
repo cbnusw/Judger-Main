@@ -2,7 +2,6 @@ package com.qt.question;
 
 import com.qt.repository.QuestionRepository;
 import com.qt.repository.ContestRepository;
-import com.qt.contest.NotFoundContestException;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.question.Question;
 import com.qt.domain.question.dto.QuestionInfo;
@@ -29,7 +28,7 @@ public class QuestionService {
 
     public Long save(Long contestId, QuestionInfo questionInfo) {
         Contest contest = contestRepository.findById(contestId)
-                .orElseThrow(NotFoundContestException::new);
+                .orElseThrow(RuntimeException::new);
 
         questionInfo.setContest(contest);
 

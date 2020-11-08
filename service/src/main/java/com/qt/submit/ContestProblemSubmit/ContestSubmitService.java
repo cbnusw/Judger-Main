@@ -1,7 +1,6 @@
 package com.qt.submit.ContestProblemSubmit;
 
 import com.qt.repository.ContestRepository;
-import com.qt.contest.NotFoundContestException;
 import com.qt.repository.ContestProblemRegistrationRepository;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.problem.Problem;
@@ -10,12 +9,10 @@ import com.qt.domain.submit.dto.ContestSubmitResponse;
 import com.qt.domain.submit.dto.ScoreBoard;
 import com.qt.domain.submit.dto.SubmitRequest;
 import com.qt.domain.user.User;
-import com.qt.problem.NotFoundProblemException;
 import com.qt.repository.ProblemRepository;
 import com.qt.submit.NotFoundSubmitException;
 import com.qt.submit.SubmitRepository;
 import com.qt.submit.SubmitService;
-import com.qt.user.NotFoundUserException;
 import com.qt.repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -48,9 +45,9 @@ public class ContestSubmitService extends SubmitService {
 
         //테이블에 저장
         ContestSubmitResponse contestSubmitResponse =new ContestSubmitResponse();
-        Contest contest=contestRepository.findById(contestId).orElseThrow(NotFoundContestException::new);
-        Problem problem=problemRepository.findById(problemId).orElseThrow(NotFoundProblemException::new);
-        User user=userRepository.findById(userId).orElseThrow(NotFoundUserException::new);
+        Contest contest=contestRepository.findById(contestId).orElseThrow(RuntimeException::new);
+        Problem problem=problemRepository.findById(problemId).orElseThrow(RuntimeException::new);
+        User user=userRepository.findById(userId).orElseThrow(RuntimeException::new);
         contestSubmitResponse.setSubmitCount(1);
         contestSubmitResponse.setLanguage(submitRequest.getLanguage());
         contestSubmitResponse.setContest(contest);
