@@ -1,6 +1,7 @@
 package com.qt.user;
 
 import com.qt.domain.user.dto.UserInfo;
+import com.qt.repository.UserRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,4 +1,4 @@
-package com.qt.contest.regist;
+package com.qt.repository;
 
 import com.qt.domain.contest.ContestProblemRegistration;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,7 +1,7 @@
 package com.qt.question;
 
 import com.qt.repository.QuestionRepository;
-import com.qt.contest.ContestRepository;
+import com.qt.repository.ContestRepository;
 import com.qt.contest.NotFoundContestException;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.question.Question;

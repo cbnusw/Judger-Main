@@ -1,14 +1,14 @@
 package com.qt.contest.regist;
 
-import com.qt.contest.ContestRepository;
+import com.qt.repository.ContestProblemRegistrationRepository;
+import com.qt.repository.ContestRepository;
 import com.qt.contest.NotFoundContestException;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.ContestProblemRegistration;
 import com.qt.domain.problem.dto.ProblemResponseInfo;
 import com.qt.problem.NotFoundProblemException;
-import com.qt.problem.ProblemRepository;
+import com.qt.repository.ProblemRepository;
 import org.modelmapper.ModelMapper;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

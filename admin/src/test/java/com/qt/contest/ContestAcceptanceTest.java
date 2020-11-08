@@ -1,12 +1,7 @@
 package com.qt.contest;
 
 import com.qt.AcceptanceTestUtils;
-import com.qt.domain.contest.Contest;
-import com.qt.domain.contest.dto.ContestInfo;
-import com.qt.domain.user.User;
 import jdk.nashorn.internal.ir.annotations.Ignore;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -17,8 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.web.reactive.function.BodyInserters;
-import com.qt.user.UserRepository;
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 
 import static org.hamcrest.Matchers.greaterThan;

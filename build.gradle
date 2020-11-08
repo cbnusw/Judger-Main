@@ -57,25 +57,33 @@ subprojects {
 }
 
 project(':admin') {
-    bootJar { enabled = true }
-    jar { enabled = true }
+
     dependencies {
         compile project(':core')
 
 
+
     }
 
+}
+project(':core'){
+    bootJar { enabled = false }
+    jar { enabled = true }
 }
 
 project(':service') {
     dependencies {
         compile project(':core')
         compile project(':admin')
+
+
     }
 }
 
 project(':professor') {
     dependencies {
         compile project(':core')
+        bootJar { enabled = false }
+        jar { enabled = true }
     }
 }

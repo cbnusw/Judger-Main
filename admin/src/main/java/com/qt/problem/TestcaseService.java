@@ -1,16 +1,12 @@
 package com.qt.problem;
 
-import com.qt.domain.problem.Problem;
-import com.qt.domain.testcase.dto.TestcaseInfo;
 import com.qt.problem.testcase.TestcaseRepository;
-import org.json.simple.JSONObject;
+import com.qt.repository.ProblemRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.List;
 
 @Service

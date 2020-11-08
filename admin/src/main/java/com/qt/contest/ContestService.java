@@ -2,6 +2,7 @@ package com.qt.contest;
 
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.dto.ContestInfo;
+import com.qt.repository.ContestRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

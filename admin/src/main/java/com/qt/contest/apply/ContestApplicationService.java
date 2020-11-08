@@ -1,6 +1,7 @@
 package com.qt.contest.apply;
 
-import com.qt.contest.ContestRepository;
+import com.qt.repository.ContestApplicationRepository;
+import com.qt.repository.ContestRepository;
 import com.qt.contest.NotFoundContestException;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.ContestApplication;
@@ -8,7 +9,7 @@ import com.qt.domain.contest.dto.ContestInfo;
 import com.qt.domain.user.User;
 import com.qt.domain.user.dto.UserInfo;
 import com.qt.user.NotFoundUserException;
-import com.qt.user.UserRepository;
+import com.qt.repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -2,10 +2,9 @@ package com.qt.question;
 
 import com.qt.AcceptanceTestUtils;
 import com.qt.repository.QuestionRepository;
-import com.qt.contest.ContestRepository;
+import com.qt.repository.ContestRepository;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.dto.ContestInfo;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

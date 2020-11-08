@@ -1,26 +1,23 @@
 package com.qt.submit.ContestProblemSubmit;
 
-import com.qt.contest.ContestRepository;
+import com.qt.repository.ContestRepository;
 import com.qt.contest.NotFoundContestException;
-import com.qt.contest.regist.ContestProblemRegistrationRepository;
+import com.qt.repository.ContestProblemRegistrationRepository;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.problem.Problem;
 import com.qt.domain.submit.ContestSubmit;
-import com.qt.domain.submit.Submit;
 import com.qt.domain.submit.dto.ContestSubmitResponse;
 import com.qt.domain.submit.dto.ScoreBoard;
 import com.qt.domain.submit.dto.SubmitRequest;
-import com.qt.domain.submit.dto.SubmitResponse;
 import com.qt.domain.user.User;
 import com.qt.problem.NotFoundProblemException;
-import com.qt.problem.ProblemRepository;
+import com.qt.repository.ProblemRepository;
 import com.qt.submit.NotFoundSubmitException;
 import com.qt.submit.SubmitRepository;
 import com.qt.submit.SubmitService;
 import com.qt.user.NotFoundUserException;
-import com.qt.user.UserRepository;
+import com.qt.repository.UserRepository;
 import org.modelmapper.ModelMapper;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

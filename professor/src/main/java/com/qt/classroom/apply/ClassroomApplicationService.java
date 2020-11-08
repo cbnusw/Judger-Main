@@ -6,7 +6,7 @@ import com.qt.domain.classroom.Classroom;
 import com.qt.domain.classroom.ClassroomApplication;
 import com.qt.domain.user.User;
 import com.qt.user.NotFoundUserException;
-import com.qt.user.UserRepository;
+import com.qt.repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

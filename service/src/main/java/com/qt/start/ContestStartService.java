@@ -1,8 +1,8 @@
 package com.qt.start;
 
-import com.qt.contest.ContestRepository;
+import com.qt.repository.ContestRepository;
 import com.qt.contest.NotFoundContestException;
-import com.qt.contest.apply.ContestApplicationRepository;
+import com.qt.repository.ContestApplicationRepository;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.ContestApplication;
 import com.qt.domain.start.ContestStartInfo;
@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Service
 @Transactional

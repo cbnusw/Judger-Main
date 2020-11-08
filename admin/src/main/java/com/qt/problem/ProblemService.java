@@ -4,6 +4,7 @@ import com.qt.domain.problem.Problem;
 import com.qt.domain.problem.dto.FileInfo;
 import com.qt.domain.problem.dto.ProblemRequestInfo;
 import com.qt.domain.problem.dto.ProblemResponseInfo;
+import com.qt.repository.ProblemRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -14,7 +15,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service

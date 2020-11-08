@@ -1,4 +1,4 @@
-package com.qt.contest.apply;
+package com.qt.repository;
 
 import com.qt.domain.contest.ContestApplication;
 import com.qt.domain.contest.ContestProblemRegistration;
