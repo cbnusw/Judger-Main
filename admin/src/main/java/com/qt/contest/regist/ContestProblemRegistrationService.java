@@ -32,8 +32,8 @@ public class ContestProblemRegistrationService {
         Contest contest = contestRepository.findById(contestId).orElseThrow(RuntimeException::new);
 
         problemIds.stream()
-                .map(id -> problemRepository.findById(id).orElseThrow(RuntimeException::new))
-                .forEach(problem -> contestProblemRegistrationRepository.save(new ContestProblemRegistration(contest, problem)));
+                .map(id -> problemRepository.findById(id).orElseThrow(RuntimeException::new)) //id를 하나씩가져와 prolbem을만든다.
+                .forEach(problem -> contestProblemRegistrationRepository.save(new ContestProblemRegistration(contest, problem))); //ContestProblemRegistration 엔티티에 Contest와 각 Problem을저장한다.
     }
 
     @Transactional(readOnly = true)
