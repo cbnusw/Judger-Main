@@ -6,6 +6,7 @@ import com.qt.domain.submit.dto.SubmitResponse;
 import com.qt.domain.submit.dto.SubmitRequest;
 import com.qt.domain.user.User;
 import com.qt.repository.ProblemRepository;
+import com.qt.repository.SubmitRepository;
 import com.qt.repository.UserRepository;
 import org.json.simple.JSONObject;
 import org.modelmapper.ModelMapper;
@@ -182,7 +183,7 @@ public class SubmitService {
 
     //조회
     public SubmitResponse findByid(Long submitId){
-        Submit submit=submitRepository.findById(submitId).orElseThrow(NotFoundSubmitException::new);
+        Submit submit=submitRepository.findById(submitId).orElseThrow(RuntimeException::new);
         return modelMapper.map(submit, SubmitResponse.class);
     }
 }

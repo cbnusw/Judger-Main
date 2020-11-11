@@ -38,7 +38,7 @@ public class QuestionService {
 
     @Transactional(readOnly = true)
     public QuestionInfo findById(Long id) {
-        Question question = questionRepository.findById(id).orElseThrow(NotFoundQuestionException::new);
+        Question question = questionRepository.findById(id).orElseThrow(RuntimeException::new);
         return modelMapper.map(question, QuestionInfo.class);
     }
 

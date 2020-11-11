@@ -1,5 +1,6 @@
 package com.qt.contest.apply;
 
+import com.qt.domain.contest.dto.ContestApplicationInfo;
 import com.qt.repository.ContestApplicationRepository;
 import com.qt.repository.ContestRepository;
 import com.qt.domain.contest.Contest;

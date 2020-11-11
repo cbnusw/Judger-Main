@@ -53,7 +53,7 @@ public class QuestionController {
     }
 
     @ExceptionHandler
-    public ResponseEntity<?> eventErrorHandler(NotFoundQuestionException exception) {
+    public ResponseEntity<?> eventErrorHandler(RuntimeException exception) {
         return ResponseEntity.notFound().build();
     }
 }

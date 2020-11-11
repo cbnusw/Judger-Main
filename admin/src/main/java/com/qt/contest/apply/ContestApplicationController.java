@@ -1,5 +1,6 @@
 package com.qt.contest.apply;
 
+import com.qt.domain.contest.dto.ContestApplicationInfo;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

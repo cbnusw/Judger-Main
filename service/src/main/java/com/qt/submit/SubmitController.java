@@ -49,9 +49,6 @@ public class SubmitController {
         return ResponseEntity.noContent().build();
     }
 
-    //코드 제출(과제)
-
-
 
     //결과 조회
     @GetMapping("submit/{id}")

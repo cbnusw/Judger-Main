@@ -1,4 +1,4 @@
-package com.qt.contest.apply;
+package com.qt.domain.contest.dto;
 
 import com.qt.domain.contest.dto.ContestInfo;
 import com.qt.domain.user.dto.UserInfo;
