@@ -6,6 +6,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.client.AutoConfigureWebClient;
+import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpHeaders;
@@ -14,10 +16,13 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.web.reactive.function.BodyInserters;
 
+import java.time.Duration;
+
 import static org.hamcrest.Matchers.greaterThan;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@AutoConfigureWebTestClient(timeout = "360000") //Timeout을 15초로 설정
 public class ProblemAcceptanceTest {
 
     @Autowired
@@ -25,16 +30,18 @@ public class ProblemAcceptanceTest {
 
     private String problemId;
 
-    @BeforeEach
+    @Test
+    //@BeforeEach
     @DisplayName("pdf 파일, 문제 저장 테스트")
     void createProblem() {
+        System.out.println("문제 저장테스트-------------------");
         ByteArrayResource file = createFile("test.pdf");
 
         WebTestClient.ResponseSpec responseSpec = webTestClient.post()
                 .uri("/problems")
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromMultipartData("file", file)
-                        .with("name", "test")
+                        .with("name", "test1")
                         .with("timeLimit", 1d)
                         .with("memoryLimit", 1d))
                 .exchange()
@@ -48,6 +55,7 @@ public class ProblemAcceptanceTest {
     @Test
     @DisplayName("전체 문제 정보 조회 테스트")
     void showAllProblems() {
+        System.out.println("전체 문제 정보 조회 테스트-------------------");
         webTestClient.get()
                 .uri("/problems")
                 .exchange()
@@ -60,6 +68,8 @@ public class ProblemAcceptanceTest {
     @Test
     @DisplayName("문제 정보 조회 테스트")
     void showProblem() {
+        System.out.println("문제 정보 조회 테스트-------------------");
+        System.out.println("problemId: "+problemId);
         webTestClient.get()
                 .uri("/problems/" + problemId)
                 .exchange()
@@ -72,6 +82,7 @@ public class ProblemAcceptanceTest {
     @Test
     @DisplayName("문제 pdf 파일 다운로드 테스트")
     void downloadFile() {
+        System.out.println("문제 다운로드 테스트-------------------");
         webTestClient.get()
                 .uri("/problems/" + problemId + "/files")
                 .accept(MediaType.APPLICATION_PDF)
@@ -84,6 +95,7 @@ public class ProblemAcceptanceTest {
     @Test
     @DisplayName("문제, pdf 파일 수정 테스트")
     void updateProblem() {
+        System.out.println("문제 파일 수정 테스트-------------------");
         ByteArrayResource file = createFile("update.pdf");
 
         webTestClient.post()
@@ -97,6 +109,7 @@ public class ProblemAcceptanceTest {
                 .expectStatus()
                 .isNoContent();
 
+        System.out.println("수정한파일 조회 테스트-------------------");
         webTestClient.get()
                 .uri("/problems/" + problemId)
                 .exchange()
@@ -109,12 +122,14 @@ public class ProblemAcceptanceTest {
     @Test
     @DisplayName("문제, pdf 파일 삭제 테스트")
     void deleteProblem() {
+        System.out.println("문제 파일 삭제 테스트-------------------");
         webTestClient.delete()
                 .uri("/problems/" + problemId)
                 .exchange()
                 .expectStatus()
                 .isNoContent();
 
+        System.out.println("삭제되었는지 조회-------------------");
         webTestClient.get()
                 .uri("/problems/" + problemId)
                 .exchange()
@@ -125,13 +140,14 @@ public class ProblemAcceptanceTest {
     @Test
     @DisplayName("테스트 케이스 업로드 테스트")
     void uploadTestcases() {
+        System.out.println("테스트 케이스 업로드 테스트-------------------");
         ByteArrayResource inputFile1 = createFile("1.in");
         ByteArrayResource inputFile2 = createFile("2.in");
         ByteArrayResource outputFile1 = createFile("1.out");
         ByteArrayResource outputFile2 = createFile("2.out");
 
-        webTestClient.post()
-                .uri("/problems/" + problemId + "/testcase")
+        webTestClient.mutate().responseTimeout(Duration.ofMillis(30000)).build().post()
+                .uri("/problems/" + "1" + "/testcase")
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromMultipartData("in", inputFile1)
                         .with("out", outputFile1)

@@ -44,7 +44,7 @@ public class UserInfo {
     @Override
     public String toString() {
         return  "universityCode='" + universityCode + '\'' +
-                ", studentId=" + studentId +
+                //", studentId=" + studentId +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'';

@@ -1,6 +1,7 @@
 package com.qt.user;
 
 import com.qt.domain.user.dto.UserInfo;
+import com.qt.repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

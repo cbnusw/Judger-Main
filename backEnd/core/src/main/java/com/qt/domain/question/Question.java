@@ -23,30 +23,32 @@ public class Question {
     @ManyToOne
     private Contest contest;
 
-<<<<<<< HEAD
-=======
+
     @CreatedBy
     @ManyToOne
     private User user;
 
     @NotNull
->>>>>>> 9b0c369c9a946ec3fab067eb56d17b344a01d415
     private Integer problemNumber;
 
     @Lob
     private String content;
 
     @Lob
-    private String response;
+    private String reply;
 
-    @CreatedDate
+    @NotNull
     private LocalDateTime createTime;
 
-    public Question(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, String response, LocalDateTime createTime) {
+    public Question(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, LocalDateTime createTime,String reply) {
         this.contest = contest;
         this.problemNumber = problemNumber;
         this.content = content;
-        this.response = response;
         this.createTime = createTime;
+        this.reply=reply;
+    }
+
+    public void updateTo(String reply){
+        this.reply=reply;
     }
 }
