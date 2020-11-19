@@ -140,6 +140,8 @@ public class ProblemAcceptanceTest {
     @Test
     @DisplayName("테스트 케이스 업로드 테스트")
     void uploadTestcases() {
+
+
         System.out.println("테스트 케이스 업로드 테스트-------------------");
         ByteArrayResource inputFile1 = createFile("1.in");
         ByteArrayResource inputFile2 = createFile("2.in");
@@ -147,7 +149,7 @@ public class ProblemAcceptanceTest {
         ByteArrayResource outputFile2 = createFile("2.out");
 
         webTestClient.mutate().responseTimeout(Duration.ofMillis(30000)).build().post()
-                .uri("/problems/" + "1" + "/testcase")
+                .uri("/problems/" + "2" + "/testcase")
                 .contentType(MediaType.MULTIPART_FORM_DATA)
                 .body(BodyInserters.fromMultipartData("in", inputFile1)
                         .with("out", outputFile1)

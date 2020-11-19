@@ -25,6 +25,7 @@ subprojects {
     }
 
     dependencies {
+        implementation 'org.json:json:20190722'
         implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
         implementation 'org.springframework.boot:spring-boot-starter-web'
         implementation("mysql:mysql-connector-java")

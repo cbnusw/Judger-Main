@@ -14,24 +14,15 @@ import java.util.List;
 @RestController
 public class SubmitController {
 
-    private final SubmitService submitService;
+    //private final SubmitService submitService;
     private final ContestSubmitService contestSubmitService;
 
 
-    public SubmitController(SubmitService submitService, ContestSubmitService contestSubmitService) {
-        this.submitService = submitService;
+    public SubmitController(ContestSubmitService contestSubmitService) {
         this.contestSubmitService = contestSubmitService;
     }
 
-    //코드 제출(문제)
-    //테이블에 제출 언어나, 채점결과등이 저장됨
-    @PostMapping("/submit/problems/{pid}/users/{uid}")
-    public ResponseEntity submitProblem(@PathVariable("pid") Long problemId, @PathVariable("uid") Long userId, SubmitRequest submitRequest) {
-        submitService.Save(problemId, userId, submitRequest);
 
-        return ResponseEntity.noContent().build();
-
-    }
 
     //코드 제출(컨테스트 문제)")
     @PostMapping("/submit/contests/{cid}/problems/{pid}/users/{uid}")
@@ -49,7 +40,7 @@ public class SubmitController {
         return ResponseEntity.noContent().build();
     }
 
-
+/*
     //결과 조회
     @GetMapping("submit/{id}")
     public ResponseEntity submitResult(@PathVariable("id") Long submitId) {
@@ -58,6 +49,8 @@ public class SubmitController {
 
 
     }
+
+ */
 
     //해당컨테스트 전체결과 확인 스코어보드
     @GetMapping("contestSubmit/{id}")

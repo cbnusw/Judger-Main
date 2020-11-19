@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - UserAcceptanceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>UserAcceptanceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.qt.user.html">com.qt.user</a> &gt; UserAcceptanceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.748s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">모든 학생 조회</td>
+<td class="success">findAllUsers()</td>
+<td class="success">1.748s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>19:13:04.479 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+19:13:04.517 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+19:13:04.550 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.qt.user.UserAcceptanceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+19:13:04.576 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.qt.user.UserAcceptanceTest], using SpringBootContextLoader
+19:13:04.583 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.qt.user.UserAcceptanceTest]: class path resource [com/qt/user/UserAcceptanceTest-context.xml] does not exist
+19:13:04.585 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.qt.user.UserAcceptanceTest]: class path resource [com/qt/user/UserAcceptanceTestContext.groovy] does not exist
+19:13:04.585 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.qt.user.UserAcceptanceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+19:13:04.587 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.qt.user.UserAcceptanceTest]: UserAcceptanceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:13:04.651 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.qt.user.UserAcceptanceTest]
+19:13:04.794 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\jtm06\javaProject\git_home\Judger-Main-Server-master\admin\build\classes\java\main\com\qt\Application.class]
+19:13:04.797 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: URL [jar:file:/C:/Users/jtm06/javaProject/git_home/Judger-Main-Server-master/core/build/libs/core-1.0.jar!/com/qt/Application.class]
+19:13:04.799 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.qt.Application for test class com.qt.user.UserAcceptanceTest
+19:13:05.022 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.qt.user.UserAcceptanceTest]: using defaults.
+19:13:05.023 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+19:13:05.062 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7420c834, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@41bbcd54, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@f9208c1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@621945c7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@108a40d8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@fc4eef0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@108f3bc9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@38106362, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7a5e6838, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@52c5aaed, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3b7d920f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@cded71]
+19:13:05.070 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@70b7ed24 testClass = UserAcceptanceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@d25783c testClass = UserAcceptanceTest, locations = '{}', classes = '{class com.qt.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4038e61c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@47c48afe, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6587b49f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@a553835, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@46a27056], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false]], class annotated with @DirtiesContext [false] with mode [null].
+19:13:05.083 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@70b7ed24 testClass = UserAcceptanceTest, testInstance = com.qt.user.UserAcceptanceTest@79a10e85, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@d25783c testClass = UserAcceptanceTest, locations = '{}', classes = '{class com.qt.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4038e61c, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@47c48afe, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6587b49f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@a553835, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@46a27056], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false]]].
+19:13:05.122 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.7.RELEASE)
+
+2020-11-19 19:13:05.715  INFO 29972 --- [    Test worker] com.qt.user.UserAcceptanceTest           : Starting UserAcceptanceTest on LAPTOP-C0G38BEB with PID 29972 (started by jtm06 in C:\Users\jtm06\javaProject\git_home\Judger-Main-Server-master\admin)
+2020-11-19 19:13:05.717  INFO 29972 --- [    Test worker] com.qt.user.UserAcceptanceTest           : No active profile set, falling back to default profiles: default
+2020-11-19 19:13:07.351  INFO 29972 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-19 19:13:07.899  INFO 29972 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 525ms. Found 9 repository interfaces.
+2020-11-19 19:13:08.744  INFO 29972 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5233191f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-19 19:13:09.876  INFO 29972 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2020-11-19 19:13:09.935  INFO 29972 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 19:13:09.936  INFO 29972 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-11-19 19:13:10.340  INFO 29972 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 19:13:10.341  INFO 29972 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4589 ms
+2020-11-19 19:13:11.199  INFO 29972 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 19:13:11.374  INFO 29972 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-11-19 19:13:11.379  INFO 29972 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-11-19 19:13:11.721  INFO 29972 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-11-19 19:13:12.048  INFO 29972 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-19 19:13:12.375  INFO 29972 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-19 19:13:12.405  INFO 29972 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 19:13:14.485  INFO 29972 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 19:13:16.877  INFO 29972 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 19:13:17.021  WARN 29972 --- [    Test worker] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-19 19:13:17.141  INFO 29972 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-11-19 19:13:18.234  INFO 29972 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2084 (http) with context path ''
+2020-11-19 19:13:18.238  INFO 29972 --- [    Test worker] com.qt.user.UserAcceptanceTest           : Started UserAcceptanceTest in 13.113 seconds (JVM running for 15.517)
+모든 학생 조회 테스트-------------------
+Hibernate: 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+Hibernate: 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+Hibernate: 
+    /* insert com.qt.domain.user.User
+        */ insert 
+        into
+            user
+            (email, name, phone_number, university_code, user_id, id) 
+        values
+            (?, ?, ?, ?, ?, ?)
+2020-11-19 19:13:18.666 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [a@b.c]
+2020-11-19 19:13:18.666 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [s1]
+2020-11-19 19:13:18.666 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [1234]
+2020-11-19 19:13:18.666 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [cbnu]
+2020-11-19 19:13:18.667 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [2014]
+2020-11-19 19:13:18.668 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [4]
+Hibernate: 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+Hibernate: 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+Hibernate: 
+    /* insert com.qt.domain.user.User
+        */ insert 
+        into
+            user
+            (email, name, phone_number, university_code, user_id, id) 
+        values
+            (?, ?, ?, ?, ?, ?)
+2020-11-19 19:13:18.689 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [a@b.c]
+2020-11-19 19:13:18.689 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [s2]
+2020-11-19 19:13:18.689 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [1234]
+2020-11-19 19:13:18.690 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [cbnu]
+2020-11-19 19:13:18.690 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [2015]
+2020-11-19 19:13:18.690 TRACE 29972 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [5]
+2020-11-19 19:13:19.403  INFO 29972 --- [1-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 19:13:19.404  INFO 29972 --- [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 19:13:19.434  INFO 29972 --- [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+2020-11-19 19:13:19.504  INFO 29972 --- [1-auto-1-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+Hibernate: 
+    /* select
+        generatedAlias0 
+    from
+        User as generatedAlias0 */ select
+            user0_.id as id1_13_,
+            user0_.email as email2_13_,
+            user0_.name as name3_13_,
+            user0_.phone_number as phone_nu4_13_,
+            user0_.university_code as universi5_13_,
+            user0_.user_id as user_id6_13_ 
+        from
+            user user0_
+2020-11-19 19:13:19.654 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_13_] : [BIGINT]) - [4]
+2020-11-19 19:13:19.657 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([email2_13_] : [VARCHAR]) - [a@b.c]
+2020-11-19 19:13:19.658 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([name3_13_] : [VARCHAR]) - [s1]
+2020-11-19 19:13:19.658 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([phone_nu4_13_] : [VARCHAR]) - [1234]
+2020-11-19 19:13:19.658 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([universi5_13_] : [VARCHAR]) - [cbnu]
+2020-11-19 19:13:19.659 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([user_id6_13_] : [VARCHAR]) - [2014]
+2020-11-19 19:13:19.659 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_13_] : [BIGINT]) - [5]
+2020-11-19 19:13:19.660 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([email2_13_] : [VARCHAR]) - [a@b.c]
+2020-11-19 19:13:19.660 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([name3_13_] : [VARCHAR]) - [s2]
+2020-11-19 19:13:19.660 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([phone_nu4_13_] : [VARCHAR]) - [1234]
+2020-11-19 19:13:19.661 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([universi5_13_] : [VARCHAR]) - [cbnu]
+2020-11-19 19:13:19.661 TRACE 29972 --- [1-auto-1-exec-1] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([user_id6_13_] : [VARCHAR]) - [2015]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.3</a> at 2020. 11. 19. 오후 7:13:20</p>
+</div>
+</div>
+</body>
+</html>
