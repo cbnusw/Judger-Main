@@ -1,6 +1,7 @@
 package com.qt.classroom.apply;
 
 import com.qt.domain.classroom.ClassroomApplication;
+import com.qt.repository.ClassroomApplicationRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

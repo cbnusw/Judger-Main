@@ -2,6 +2,7 @@ package com.qt.classroom;
 
 import com.qt.domain.classroom.Classroom;
 import com.qt.domain.classroom.dto.ClassroomInfo;
+import com.qt.repository.ClassroomRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,13 +41,13 @@ public class ClassroomService {
     @Transactional(readOnly = true)
     public ClassroomInfo findById(Long id)
     {
-        Classroom classroom=classroomRepository.findById(id).orElseThrow(NotFoundClassroomException::new);
+        Classroom classroom=classroomRepository.findById(id).orElseThrow(RuntimeException::new); //NotFoundClassroomException
         return modelMapper.map(classroom,ClassroomInfo.class);
     }
 
     public Long updateClassroom(Long id,ClassroomInfo classroomInfo)
     {
-        Classroom classroom= classroomRepository.findById(id).orElseThrow(NotFoundClassroomException::new);
+        Classroom classroom= classroomRepository.findById(id).orElseThrow(RuntimeException::new); //NotFoundClassroomException
         return classroom.updateTo(classroomInfo);
     }
 

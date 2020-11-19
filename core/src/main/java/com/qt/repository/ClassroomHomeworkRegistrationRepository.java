@@ -1,4 +1,4 @@
-package com.qt.classroom.regist;
+package com.qt.repository;
 
 import com.qt.domain.classroom.ClassroomHomeworkRegistration;
 import org.springframework.data.jpa.repository.JpaRepository;

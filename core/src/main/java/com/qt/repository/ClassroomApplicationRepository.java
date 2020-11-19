@@ -1,4 +1,4 @@
-package com.qt.classroom.apply;
+package com.qt.repository;
 
 import com.qt.domain.classroom.ClassroomApplication;
 import org.springframework.data.jpa.repository.JpaRepository;

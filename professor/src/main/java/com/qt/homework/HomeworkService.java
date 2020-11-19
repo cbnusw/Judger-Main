@@ -1,9 +1,10 @@
 package com.qt.homework;
 
-import com.qt.classroom.ClassroomRepository;
 import com.qt.domain.homework.Homework;
 import com.qt.domain.homework.dto.FileInfo;
 import com.qt.domain.homework.dto.HomeworkInfo;
+import com.qt.repository.ClassroomRepository;
+import com.qt.repository.HomeworkRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -63,13 +64,13 @@ public class HomeworkService {
         return homeworkRepository
                        .findById(id)
                        .map(homework-> modelMapper.map(homework,HomeworkInfo.class))
-                       .orElseThrow(NotFoundHomeworkException::new);
+                       .orElseThrow(RuntimeException::new); //NotFoundHomeworkException
 
     }
 
     @Transactional(readOnly = true)
     public FileInfo findHomeworkFile(Long id) throws IOException{
-        Homework homework=homeworkRepository.findById(id).orElseThrow(NotFoundHomeworkException::new);
+        Homework homework=homeworkRepository.findById(id).orElseThrow(RuntimeException::new); //NotFoundHomeworkException
         String identifier= homework.getIdentifier();
         //PATH+identifier
         Resource resource=resourceLoader.getResource(FILE_PATH+LOCAL_PROBLEM_STORAGE_PATH  +"/" + homework.getHomeworkName());
@@ -108,7 +109,7 @@ public class HomeworkService {
     }
 
     private Homework deleteHomeworkFile(Long id) throws IOException {
-        Homework homework = homeworkRepository.findById(id).orElseThrow(NotFoundHomeworkException::new);
+        Homework homework = homeworkRepository.findById(id).orElseThrow(RuntimeException::new); //NotFoundHomeworkException
         Resource resource = resourceLoader.getResource(FILE_PATH + LOCAL_PROBLEM_STORAGE_PATH + homework.getIdentifier());
         resource.getFile().delete();
         return homework;

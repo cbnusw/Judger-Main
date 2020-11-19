@@ -67,7 +67,7 @@ public class HomeworkController {
     }
 
     @ExceptionHandler
-    public ResponseEntity eventErrorHandler(NotFoundHomeworkException exception) {
+    public ResponseEntity eventErrorHandler(RuntimeException exception) { //NotFoundHomeworkException
         return ResponseEntity.notFound().build();
     }
 

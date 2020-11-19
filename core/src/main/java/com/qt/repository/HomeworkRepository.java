@@ -1,4 +1,4 @@
-package com.qt.homework;
+package com.qt.repository;
 
 import com.qt.domain.homework.Homework;
 import org.springframework.data.jpa.repository.JpaRepository;

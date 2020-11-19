@@ -1,11 +1,12 @@
 package com.qt.classroom.regist;
 
-import com.qt.classroom.ClassroomRepository;
 import com.qt.classroom.NotFoundClassroomException;
 import com.qt.domain.classroom.Classroom;
 import com.qt.domain.classroom.ClassroomHomeworkRegistration;
 import com.qt.domain.homework.dto.HomeworkInfo;
-import com.qt.homework.HomeworkRepository;
+import com.qt.repository.ClassroomHomeworkRegistrationRepository;
+import com.qt.repository.ClassroomRepository;
+import com.qt.repository.HomeworkRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
