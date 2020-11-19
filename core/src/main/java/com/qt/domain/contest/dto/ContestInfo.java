@@ -20,13 +20,6 @@ public class ContestInfo {
 
     private String description;
 
-    @NotNull
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime activeTime;
-
-    @NotNull
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime inActiveTime;
 
     @NotNull
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
@@ -36,41 +29,24 @@ public class ContestInfo {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime endTime;
 
-    @NotNull
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime freezeTime;
-
-    @NotNull
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime unFreezeTime;
 
     @Builder
-    public ContestInfo(@NotNull String name, String description, @NotNull LocalDateTime activeTime, @NotNull LocalDateTime inActiveTime, @NotNull LocalDateTime startTime, @NotNull LocalDateTime endTime, @NotNull LocalDateTime freezeTime, @NotNull LocalDateTime unFreezeTime) {
+    public ContestInfo(@NotNull String name, String description,@NotNull LocalDateTime startTime, @NotNull LocalDateTime endTime ) {
         this.name = name;
         this.description = description;
-        this.activeTime = activeTime;
-        this.inActiveTime = inActiveTime;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.freezeTime = freezeTime;
-        this.unFreezeTime = unFreezeTime;
     }
 
     public Contest toEntity() {
-        return new Contest(name, description, activeTime, inActiveTime, startTime, endTime, freezeTime, unFreezeTime);
+        return new Contest(name, description, startTime, endTime);
     }
 
-
-    //수정 필요???
     @Override
     public String toString() {
         return "name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", activeTime=" + activeTime +
-                ", inActiveTime=" + inActiveTime +
                 ", startTime=" + startTime +
-                ", endTime=" + endTime +
-                ", freezeTime=" + freezeTime +
-                ", unFreezeTime=" + unFreezeTime;
+                ", endTime=" + endTime;
     }
 }

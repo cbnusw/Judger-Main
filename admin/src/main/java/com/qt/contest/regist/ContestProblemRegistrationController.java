@@ -16,15 +16,20 @@ public class ContestProblemRegistrationController {
         this.contestProblemRegistrationService = contestProblemRegistrationService;
     }
 
+    //특정 콘테스트에 문제 추가
     @PostMapping("/{contestId}/problems")
     public ResponseEntity registerProblems(@PathVariable Long contestId, @RequestParam List<Long> problemIds) {
         contestProblemRegistrationService.register(contestId, problemIds);
         return ResponseEntity.noContent().build();
     }
 
+    //특정 콘테스트에 등록된 문제 조회
     @GetMapping("/{contestId}/problems")
     public ResponseEntity<List<ProblemResponseInfo>> showRegisteredProblems(@PathVariable Long contestId) {
         List<ProblemResponseInfo> problemResponseInfos = contestProblemRegistrationService.showRegisteredProblems(contestId);
         return ResponseEntity.ok(problemResponseInfos);
     }
+
+
+
 }

@@ -2,9 +2,6 @@ package com.qt.domain.question.dto;
 
 import com.qt.domain.contest.Contest;
 import com.qt.domain.question.Question;
-//import com.qt.domain.student.Student; //student라는 패키지 만들것
-import com.qt.domain.user.User; //혹은 user로 사용
-
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,22 +30,24 @@ public class QuestionInfo {
     private String content;
 
     @Lob
-    private String response;
+    private String reply;
 
-    @CreatedDate
+
+    @NotNull
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime createTime;
 
     @Builder
-    public QuestionInfo(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, String response, LocalDateTime createTime) {
+    public QuestionInfo(@NotNull Contest contest, @NotNull Integer problemNumber, @NotNull String content, LocalDateTime createTime, String reply) {
         this.contest = contest;
         this.problemNumber = problemNumber;
         this.content = content;
-        this.response = response;
         this.createTime = createTime;
+        this.reply=reply;
     }
 
     public Question toEntity() {
-        return new Question(contest, problemNumber, content, response, createTime);
+        return new Question(contest, problemNumber, content, createTime,reply);
     }
 
     @Override
@@ -56,8 +55,8 @@ public class QuestionInfo {
         return "QuestionInfo{" +
                 "contest=" + contest +
                 ", problemNumber=" + problemNumber +
+                ", reply=" +reply +
                 ", content='" + content + '\'' +
-                ", response='" + response + '\'' +
                 ", createTime=" + createTime +
                 '}';
     }

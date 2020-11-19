@@ -5,8 +5,7 @@ import com.qt.classroom.NotFoundClassroomException;
 import com.qt.domain.classroom.Classroom;
 import com.qt.domain.classroom.ClassroomApplication;
 import com.qt.domain.user.User;
-import com.qt.user.NotFoundUserException;
-import com.qt.user.UserRepository;
+import com.qt.repository.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,7 +33,7 @@ public class ClassroomApplicationService {
     public Long apply(Long classroomId,Long userId)
     {
         Classroom classroom = classroomRepository.findById(classroomId).orElseThrow(NotFoundClassroomException::new);
-        User user = userRepository.findById(userId).orElseThrow(NotFoundUserException::new);
+        User user = userRepository.findById(userId).orElseThrow(RuntimeException::new); //NotFoundException
         return classroomApplicationRepository.save(new ClassroomApplication(classroom, user)).getId();
     }
 

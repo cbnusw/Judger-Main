@@ -1,4 +1,4 @@
-package com.qt.user;
+package com.qt.repository;
 
 import com.qt.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;

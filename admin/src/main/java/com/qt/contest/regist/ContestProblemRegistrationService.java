@@ -1,14 +1,12 @@
 package com.qt.contest.regist;
 
-import com.qt.contest.ContestRepository;
-import com.qt.contest.NotFoundContestException;
+import com.qt.repository.ContestProblemRegistrationRepository;
+import com.qt.repository.ContestRepository;
 import com.qt.domain.contest.Contest;
 import com.qt.domain.contest.ContestProblemRegistration;
 import com.qt.domain.problem.dto.ProblemResponseInfo;
-import com.qt.problem.NotFoundProblemException;
-import com.qt.problem.ProblemRepository;
+import com.qt.repository.ProblemRepository;
 import org.modelmapper.ModelMapper;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,11 +29,11 @@ public class ContestProblemRegistrationService {
     }
 
     public void register(Long contestId, List<Long> problemIds) {
-        Contest contest = contestRepository.findById(contestId).orElseThrow(NotFoundContestException::new);
+        Contest contest = contestRepository.findById(contestId).orElseThrow(RuntimeException::new);
 
         problemIds.stream()
-                .map(id -> problemRepository.findById(id).orElseThrow(NotFoundProblemException::new))
-                .forEach(problem -> contestProblemRegistrationRepository.save(new ContestProblemRegistration(contest, problem)));
+                .map(id -> problemRepository.findById(id).orElseThrow(RuntimeException::new)) //id를 하나씩가져와 prolbem을만든다.
+                .forEach(problem -> contestProblemRegistrationRepository.save(new ContestProblemRegistration(contest, problem))); //ContestProblemRegistration 엔티티에 Contest와 각 Problem을저장한다.
     }
 
     @Transactional(readOnly = true)
@@ -45,5 +43,6 @@ public class ContestProblemRegistrationService {
         return contestProblemRegistrations.stream()
                 .map(registration -> modelMapper.map(registration.getProblem(), ProblemResponseInfo.class))
                 .collect(Collectors.toList());
+
     }
 }

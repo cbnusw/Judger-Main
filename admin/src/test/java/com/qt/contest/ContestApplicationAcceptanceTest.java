@@ -1,14 +1,15 @@
 package com.qt.contest;
 
 import com.qt.AcceptanceTestUtils;
-import com.qt.contest.apply.ContestApplicationRepository;
 import com.qt.domain.user.User;
-import com.qt.user.UserRepository;
+import com.qt.repository.ContestApplicationRepository;
+import com.qt.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -21,6 +22,7 @@ import static org.hamcrest.Matchers.greaterThan;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@AutoConfigureWebTestClient(timeout = "360000") //Timeout을 15초로 설정 //이상있으면 지울 것
 public class ContestApplicationAcceptanceTest {
 
     @Autowired
